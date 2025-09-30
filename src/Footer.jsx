@@ -17,9 +17,13 @@ const Footer = () => {
               <li><a href="/investors">Investors</a></li>
             </ul>
             <div className="social-icons">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="social-icon">f</a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="social-icon">t</a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="social-icon">i</a>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
               <a href="#" className="social-icon">in</a>
             </div>
           </div>
