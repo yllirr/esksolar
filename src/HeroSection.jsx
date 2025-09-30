@@ -1,7 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './HeroSection.css';
 
 const HeroSection = () => {
+  const [isNightMode, setIsNightMode] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const triggerPoint = 300; // Kur të scroll-ojmë 300px, ndryshon në natë
+      
+      if (scrollPosition > triggerPoint) {
+        setIsNightMode(true);
+      } else {
+        setIsNightMode(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -45,7 +62,7 @@ const HeroSection = () => {
         </div>
 
         {/* Image Section with Cards */}
-        <div className="image-section">
+        <div className={`image-section ${isNightMode ? 'night-mode' : 'day-mode'}`}>
           <div className="container-wide">
             <div className="image-content-wrapper">
                        <div className="image-left">

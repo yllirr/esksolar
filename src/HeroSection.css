@@ -156,11 +156,19 @@
   margin-top: 3rem;
   padding: 0;
   position: relative;
-  background-image: url('../foto/hero.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 700px;
+  transition: all 1.5s ease-in-out;
+}
+
+.image-section.day-mode {
+  background-image: url('../foto/hero.jpg');
+}
+
+.image-section.night-mode {
+  background-image: url('../foto/nightt.png');
 }
 
 .image-content-wrapper {
