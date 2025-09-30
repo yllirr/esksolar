@@ -1,0 +1,135 @@
+/* Hero Clean Section */
+.hero-clean {
+  background: #fafafa;
+  background-image: 
+    linear-gradient(90deg, transparent 98%, #e0e0e0 100%),
+    linear-gradient(0deg, transparent 98%, #e0e0e0 100%);
+  background-size: 20px 20px;
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-clean-container {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.hero-clean-title {
+  font-size: 64px;
+  font-weight: 700;
+  color: #333;
+  line-height: 100%;
+  letter-spacing: -1%;
+  margin: 0;
+  text-align: center;
+}
+
+.hero-clean-illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+.hero-illustration-img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 400px;
+}
+
+.hero-clean-subtitle {
+  font-size: 28px;
+  font-weight: 400;
+  color: #666;
+  line-height: auto;
+  letter-spacing: -1%;
+  margin: 0;
+  text-align: center;
+  max-width: 600px;
+}
+
+.hero-clean-btn {
+  background: white;
+  color: #333;
+  border: 1px solid #e0e0e0;
+  padding: 0.875rem 1.75rem;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.hero-clean-btn:hover {
+  background: #f8f8f8;
+  border-color: #d0d0d0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-arrow {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+
+.hero-clean-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-clean {
+    padding: 4rem 1rem;
+  }
+
+  .hero-clean-container {
+    gap: 2rem;
+  }
+
+  .hero-clean-title {
+    font-size: 48px;
+  }
+
+  .hero-clean-subtitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-clean {
+    padding: 3rem 1rem;
+  }
+
+  .hero-clean-container {
+    gap: 1.5rem;
+  }
+
+  .hero-clean-title {
+    font-size: 36px;
+  }
+
+  .hero-clean-subtitle {
+    font-size: 20px;
+  }
+
+  .hero-clean-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+  }
+}
