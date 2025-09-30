@@ -38,7 +38,7 @@ const HeroSection = () => {
             </div>
             <div className="hero-right">
               <h2 className="bright-future">
-                BRIGHT<br />FUTURE
+                BRIGHT<br />FUTURE ⚡
               </h2>
             </div>
           </div>
