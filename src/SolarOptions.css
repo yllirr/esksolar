@@ -10,6 +10,15 @@
   gap: 0;
   width: 100%;
   min-height: 600px;
+  transition: grid-template-columns 300ms ease;
+}
+
+.options-grid.home-hover {
+  grid-template-columns: 1.2fr 0.8fr;
+}
+
+.options-grid.business-hover {
+  grid-template-columns: 0.8fr 1.2fr;
 }
 
 .option-card {
@@ -23,6 +32,7 @@
   justify-content: flex-start;
   padding: 4rem;
   overflow: hidden;
+  transition: filter 300ms ease;
 }
 
 .option-card::before {
@@ -34,6 +44,7 @@
   bottom: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1;
+  transition: background 300ms ease;
 }
 
 .option-home {
@@ -43,6 +54,10 @@
 .option-business {
   background-image: url('../foto/foto2.jpg');
 }
+
+/* Dim only the non-hovered side to keep symmetry */
+.options-grid.home-hover .option-business { filter: brightness(0.85); }
+.options-grid.business-hover .option-home { filter: brightness(0.85); }
 
 .option-content {
   position: relative;
