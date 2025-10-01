@@ -1,8 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './HeroSection.css';
 
 const HeroSection = () => {
   const [isNightMode, setIsNightMode] = useState(false);
+  const [isShineActive, setIsShineActive] = useState(false);
+  const [mousePercent, setMousePercent] = useState({ x: 50, y: 50 });
+  const brightRef = useRef(null);
+
+  const shineStyle = {
+    '--mx': `${mousePercent.x}%`,
+    '--my': `${mousePercent.y}%`,
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,7 +62,21 @@ const HeroSection = () => {
               </button>
             </div>
             <div className="hero-right">
-              <h2 className="bright-future">
+              <h2
+                ref={brightRef}
+                className={`bright-future ${isShineActive ? 'shine-active' : ''}`}
+                style={shineStyle}
+                onMouseEnter={() => setIsShineActive(true)}
+                onMouseLeave={() => setIsShineActive(false)}
+                onMouseMove={(e) => {
+                  const target = brightRef.current;
+                  if (!target) return;
+                  const rect = target.getBoundingClientRect();
+                  const x = ((e.clientX - rect.left) / rect.width) * 100;
+                  const y = ((e.clientY - rect.top) / rect.height) * 100;
+                  setMousePercent({ x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) });
+                }}
+              >
                 BRIGHT<br />FUTURE
               </h2>
             </div>
