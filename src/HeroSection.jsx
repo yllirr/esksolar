@@ -36,10 +36,10 @@ const HeroSection = () => {
           <div className="nav-wrapper">
             <div className="logo">SunPulse</div>
             <nav className="nav-menu">
-              <a href="#products">Products</a>
+              <a href="/products">Products</a>
               <a href="#pricing">Plans & Pricing</a>
-              <a href="#learn">Learn</a>
-              <a href="#company">Company</a>
+              <a href="/blog">Blog</a>
+              <a href="/about">About Us</a>
             </nav>
             <button className="btn-quote-header">Get a Quote</button>
           </div>
