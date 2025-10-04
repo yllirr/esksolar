@@ -1,3 +1,5 @@
 # ESK Solar Website
 # Test deployment
-#gadgsdgdsnn
+# Arian - Solar Energy Website
+
+A modern React application for solar energy services.
