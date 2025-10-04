@@ -103,33 +103,6 @@ const SinglePhaseInverters = () => {
             </div>
           </div>
 
-          {/* Category Actions */}
-          <div className="category-actions">
-            <div className="ideal-for-section">
-              <span className="ideal-for-label">IDEAL FOR</span>
-              <div className="ideal-for-icons">
-                <div className="ideal-for-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 9L12 2L21 9V20C21 20.5304 20.7893 21.0391 20.4142 21.4142C20.0391 21.7893 19.5304 22 19 22H5C4.46957 22 3.96086 21.7893 3.58579 21.4142C3.21071 21.0391 3 20.5304 3 20V9Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 22V12H15V22" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-                <div className="ideal-for-icon">
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path d="M3 21H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M5 21V7L13 2L21 7V21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 9H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 13H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M9 17H15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-            <div className="action-buttons">
-              <button className="btn-find-out-more">FIND OUT MORE</button>
-              <button className="btn-documentation">DOCUMENTATION</button>
-            </div>
-          </div>
 
           {/* Products Grid */}
           <div className="products-grid">
@@ -183,12 +156,6 @@ const SinglePhaseInverters = () => {
                     </div>
                   )}
                   
-                  <div className="product-actions">
-                    {!product.endOfLife && (
-                      <button className="btn-find-out-more">FIND OUT MORE</button>
-                    )}
-                    <button className="btn-documentation">DOCUMENTATION</button>
-                  </div>
                   
                 </div>
               </div>
