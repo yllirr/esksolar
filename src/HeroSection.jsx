@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -34,12 +35,12 @@ const HeroSection = () => {
       <header className="header">
         <div className="container">
           <div className="nav-wrapper">
-            <div className="logo">SunPulse</div>
+            <Link to="/" className="logo">SunPulse</Link>
             <nav className="nav-menu">
-              <a href="/products">Products</a>
-              <a href="#pricing">Plans & Pricing</a>
-              <a href="/blog">Blog</a>
-              <a href="/about">About Us</a>
+              <Link to="/">Home</Link>
+              <Link to="/products">Products</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/contact">Contact</Link>
             </nav>
             <button className="btn-quote-header">Get a Quote</button>
           </div>

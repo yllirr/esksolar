@@ -22,10 +22,10 @@ const Products = () => {
           <div className="nav-wrapper">
             <Link to="/" className="logo">SunPulse</Link>
             <nav className="nav-menu">
-              <a href="/products">Products</a>
-              <a href="#pricing">Plans & Pricing</a>
-              <a href="#learn">Learn</a>
-              <a href="#company">Company</a>
+              <Link to="/">Home</Link>
+              <Link to="/products">Products</Link>
+              <Link to="/blog">Blog</Link>
+              <Link to="/contact">Contact</Link>
             </nav>
             <button className="btn-quote-header">Get a Quote</button>
           </div>
@@ -55,6 +55,42 @@ const Products = () => {
                     alt={p.title}
                     className="product-thumb-image"
                   />
+                ) : p.key === 'storage-inverter' ? (
+                  <img 
+                    src="/products/storage-inverter/storage-main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
+                ) : p.key === 'retrofit-storage' ? (
+                  <img 
+                    src="/products/outdoor/outdoor-main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
+                ) : p.key === 'lv-batteries' ? (
+                  <img 
+                    src="/products/lv-batteries/lv-batteries-main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
+                ) : p.key === 'hv-batteries' ? (
+                  <img 
+                    src="/products/hv-batteries/hv-batteries-main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
+                ) : p.key === 'e-mobility' ? (
+                  <img 
+                    src="/products/electric/electric-main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
+                ) : p.key === 'monitoring' ? (
+                  <img 
+                    src="/products/monitoring-systems/monitoring-system-main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
                 ) : (
                   <div className="thumb-fallback" />
                 )}
@@ -65,7 +101,13 @@ const Products = () => {
                 <Link 
                   to={
                     p.key === 'single-phase' ? '/products/single-phase-inverters' :
-                    p.key === 'three-phase' ? '/products/three-phase-inverters' : '#'
+                    p.key === 'three-phase' ? '/products/three-phase-inverters' :
+                    p.key === 'storage-inverter' ? '/products/storage-inverters' :
+                    p.key === 'retrofit-storage' ? '/products/outdoor-retrofit-storage' :
+                    p.key === 'lv-batteries' ? '/products/lv-batteries' :
+                    p.key === 'hv-batteries' ? '/products/hv-batteries' :
+                    p.key === 'e-mobility' ? '/products/electric-mobility' :
+                    p.key === 'monitoring' ? '/products/monitoring-systems' : '#'
                   } 
                   className="product-cta"
                 >

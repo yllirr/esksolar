@@ -91,10 +91,10 @@ const ThreePhaseInverters = () => {
           <div className="nav-wrapper">
             <Link to="/" className="logo">SunPulse</Link>
             <nav className="nav-menu">
+              <Link to="/">Home</Link>
               <Link to="/products">Products</Link>
-              <a href="#pricing">Plans & Pricing</a>
               <Link to="/blog">Blog</Link>
-              <Link to="/about">About Us</Link>
+              <Link to="/contact">Contact</Link>
             </nav>
             <button className="btn-quote-header">Get a Quote</button>
           </div>
