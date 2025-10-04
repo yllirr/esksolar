@@ -76,6 +76,7 @@
   align-items: center;
   gap: 0.5rem;
   transition: all 0.2s ease;
+  text-decoration: none;
 }
 
 .product-cta:hover { box-shadow: 0 6px 18px rgba(0,0,0,0.08); transform: translateY(-2px); }

@@ -10,6 +10,7 @@ import Footer from './Footer';
 import Products from './Products';
 import AboutUs from './AboutUs';
 import BlogPage from './BlogPage';
+import SinglePhaseInverters from './SinglePhaseInverters';
 import './App.css';
 
 function App() {
@@ -43,6 +44,12 @@ function App() {
           <Route path="/blog" element={
             <>
               <BlogPage />
+              <Footer />
+            </>
+          } />
+          <Route path="/products/single-phase-inverters" element={
+            <>
+              <SinglePhaseInverters />
               <Footer />
             </>
           } />

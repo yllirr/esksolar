@@ -48,9 +48,12 @@ const Products = () => {
               <div className="product-info">
                 <h3 className="product-name">{p.title}</h3>
                 <p className="product-desc">{p.desc}</p>
-                <button className="product-cta">
+                <Link 
+                  to={p.key === 'single-phase' ? '/products/single-phase-inverters' : '#'} 
+                  className="product-cta"
+                >
                   Learn more <span className="arrow">→</span>
-                </button>
+                </Link>
               </div>
             </article>
           ))}
