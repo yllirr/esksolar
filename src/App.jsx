@@ -18,6 +18,7 @@ import LVBatteries from './LVBatteries';
 import HVBatteries from './HVBatteries';
 import ElectricMobility from './ElectricMobility';
 import MonitoringSystems from './MonitoringSystems';
+import BlogPost from './BlogPost';
 import Contact from './Contact';
 import './App.css';
 
@@ -100,6 +101,12 @@ function App() {
           <Route path="/products/monitoring-systems" element={
             <>
               <MonitoringSystems />
+              <Footer />
+            </>
+          } />
+          <Route path="/blog/:id" element={
+            <>
+              <BlogPost />
               <Footer />
             </>
           } />

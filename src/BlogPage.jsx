@@ -11,7 +11,7 @@ const BLOG_POSTS = [
     date: "March 15, 2024",
     readTime: "5 min read",
     category: "Technology",
-    image: "blog-1"
+    image: "solar-future.jpg"
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const BLOG_POSTS = [
     date: "March 10, 2024",
     readTime: "7 min read",
     category: "Tips & Guides",
-    image: "blog-2"
+    image: "solar-efficiency.jpg"
   },
   {
     id: 3,
@@ -31,7 +31,7 @@ const BLOG_POSTS = [
     date: "March 5, 2024",
     readTime: "6 min read",
     category: "Investment",
-    image: "blog-3"
+    image: "battery-storage.jpg"
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const BLOG_POSTS = [
     date: "February 28, 2024",
     readTime: "8 min read",
     category: "Finance",
-    image: "blog-4"
+    image: "solar-incentives.jpg"
   },
   {
     id: 5,
@@ -51,7 +51,7 @@ const BLOG_POSTS = [
     date: "February 20, 2024",
     readTime: "6 min read",
     category: "Comparison",
-    image: "blog-5"
+    image: "residential-commercial.jpg"
   },
   {
     id: 6,
@@ -61,7 +61,7 @@ const BLOG_POSTS = [
     date: "February 15, 2024",
     readTime: "5 min read",
     category: "Maintenance",
-    image: "blog-6"
+    image: "solar-maintenance.jpg"
   }
 ];
 
@@ -97,7 +97,8 @@ const BlogPage = () => {
             <div className="blog-grid">
               {BLOG_POSTS.map((post) => (
                 <article key={post.id} className="blog-card">
-                  <div className={`blog-image blog-image-${post.image}`}>
+                  <div className="blog-image">
+                    <img src={`/foto/blog/${post.image}`} alt={post.title} />
                     <div className="blog-category">{post.category}</div>
                   </div>
                   <div className="blog-card-content">
@@ -110,58 +111,13 @@ const BlogPage = () => {
                       </div>
                       <span className="blog-read-time">{post.readTime}</span>
                     </div>
-                    <button className="blog-read-more">
+                    <Link to={`/blog/${post.id}`} className="blog-read-more">
                       Read More
                       <span className="btn-arrow">→</span>
-                    </button>
+                    </Link>
                   </div>
                 </article>
               ))}
-            </div>
-
-            <div className="blog-sidebar">
-              <div className="sidebar-section">
-                <h3 className="sidebar-title">Popular Categories</h3>
-                <div className="category-list">
-                  <button className="category-item">Technology</button>
-                  <button className="category-item">Tips & Guides</button>
-                  <button className="category-item">Investment</button>
-                  <button className="category-item">Finance</button>
-                  <button className="category-item">Maintenance</button>
-                </div>
-              </div>
-
-              <div className="sidebar-section">
-                <h3 className="sidebar-title">Recent Posts</h3>
-                <div className="recent-posts">
-                  {BLOG_POSTS.slice(0, 3).map((post) => (
-                    <div key={`recent-${post.id}`} className="recent-post">
-                      <div className={`recent-post-image blog-image-${post.image}`}></div>
-                      <div className="recent-post-content">
-                        <h4 className="recent-post-title">{post.title}</h4>
-                        <span className="recent-post-date">{post.date}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div className="sidebar-section">
-                <h3 className="sidebar-title">Newsletter</h3>
-                <div className="newsletter-form">
-                  <p className="newsletter-text">
-                    Subscribe to get the latest solar energy insights delivered to your inbox.
-                  </p>
-                  <div className="newsletter-input-group">
-                    <input 
-                      type="email" 
-                      placeholder="Enter your email" 
-                      className="newsletter-input"
-                    />
-                    <button className="newsletter-button">Subscribe</button>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
