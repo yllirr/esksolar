@@ -43,13 +43,30 @@ const Products = () => {
           {PRODUCTS.map((p) => (
             <article key={p.key} className="product-card">
               <div className={`product-thumb thumb-${p.key}`} aria-hidden>
-                <div className="thumb-fallback" />
+                {p.key === 'single-phase' ? (
+                  <img 
+                    src="/products/single-phase-inverters/main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
+                ) : p.key === 'three-phase' ? (
+                  <img 
+                    src="/products/three-phase-inverter/thre-phase-main.png" 
+                    alt={p.title}
+                    className="product-thumb-image"
+                  />
+                ) : (
+                  <div className="thumb-fallback" />
+                )}
               </div>
               <div className="product-info">
                 <h3 className="product-name">{p.title}</h3>
                 <p className="product-desc">{p.desc}</p>
                 <Link 
-                  to={p.key === 'single-phase' ? '/products/single-phase-inverters' : '#'} 
+                  to={
+                    p.key === 'single-phase' ? '/products/single-phase-inverters' :
+                    p.key === 'three-phase' ? '/products/three-phase-inverters' : '#'
+                  } 
                   className="product-cta"
                 >
                   Learn more <span className="arrow">→</span>

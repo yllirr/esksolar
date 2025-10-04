@@ -1,5 +1,5 @@
-/* Single Phase Inverters Page Styles */
-.single-phase-page {
+/* Three Phase Inverters Page Styles */
+.three-phase-page {
   background: #fff;
   min-height: 100vh;
   padding: 2rem 0;
@@ -74,7 +74,6 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  
 }
 
 .page-image img {
@@ -82,8 +81,6 @@
   height: auto;
   border-radius: 8px;
 }
-
-
 
 /* Products Grid */
 .products-grid {
@@ -112,17 +109,17 @@
 
 .product-image-container {
   position: relative;
-  padding: 1.5rem;
+  padding: 1rem;
   background: #f8f9fa;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 250px;
+  min-height: 280px;
 }
 
 .product-image {
   max-width: 100%;
-  max-height: 200px;
+  max-height: 240px;
   object-fit: contain;
 }
 
@@ -147,9 +144,6 @@
   margin: 0 0 1rem;
   line-height: 1.4;
 }
-
-
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
@@ -177,11 +171,9 @@
     font-size: 2rem;
   }
   
-  
   .products-grid {
     grid-template-columns: 1fr;
   }
-  
 }
 
 @media (max-width: 480px) {
@@ -191,10 +183,10 @@
   
   .product-image-container {
     padding: 1rem;
-    min-height: 200px;
+    min-height: 220px;
   }
   
   .product-image {
-    max-height: 160px;
+    max-height: 180px;
   }
 }
