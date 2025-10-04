@@ -11,7 +11,6 @@ const SINGLE_PHASE_PRODUCTS = [
     image: "1PH 6000TLM-V3.png",
     idealFor: ["residential", "commercial"],
     endOfLife: false,
-    hasVirtualGuide: false
   },
   {
     id: 2,
@@ -19,15 +18,13 @@ const SINGLE_PHASE_PRODUCTS = [
     model: "Single-phase Inverter 1100TL-V1/3000TL-V1 - Plus Series",
     image: "Single-phase Inverter 1100TL-V1:3000TL-V1 - Plus Series.png",
     endOfLife: true,
-    hasVirtualGuide: false
   },
   {
     id: 3,
     name: "Single-phase Inverter",
     model: "Single-phase String Inverter 1PH 3000TLM-V1/1PH 6000TLM-V1 - Plus Series",
     image: "Single-phase String Inverter 1PH 3000TLM-V1:1PH 6000TLM-V1 - Plus Series.png",
-    endOfLife: true,
-    hasVirtualGuide: true
+    endOfLife: true
   },
   {
     id: 4,
@@ -35,7 +32,6 @@ const SINGLE_PHASE_PRODUCTS = [
     model: "Single-phase inverter 1PH 3000TLM-V2/1PH 6000TLM-V2 - Lite Series",
     image: "ZCS-AZZURRO-INVERTER-DI-STRINGA-MONOFASE-1PH-3000TLM-V2-1PH-6000TLM-V2-EndOfLife.png",
     endOfLife: true,
-    hasVirtualGuide: false
   },
   {
     id: 5,
@@ -45,7 +41,6 @@ const SINGLE_PHASE_PRODUCTS = [
     image: "1PH 3300TL-V3.png",
     idealFor: ["residential"],
     endOfLife: false,
-    hasVirtualGuide: false
   }
 ];
 
@@ -195,18 +190,6 @@ const SinglePhaseInverters = () => {
                     <button className="btn-documentation">DOCUMENTATION</button>
                   </div>
                   
-                  {product.hasVirtualGuide && (
-                    <div className="virtual-guide-box">
-                      <div className="virtual-guide-icon">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                          <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <path d="M2 17L12 22L22 17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                          <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                      </div>
-                      <span>Virtual Installation Guide</span>
-                    </div>
-                  )}
                 </div>
               </div>
             ))}

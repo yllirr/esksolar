@@ -197,6 +197,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
+  align-items: stretch;
 }
 
 .product-card {
@@ -206,6 +207,9 @@
   overflow: hidden;
   transition: all 0.3s ease;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .product-card:hover {
@@ -231,36 +235,24 @@
 
 .end-of-life-badge {
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  background: #007bff;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: #dc3545;
   color: white;
-  padding: 0.5rem;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
   font-size: 0.7rem;
   font-weight: 600;
-}
-
-.badge-icon {
-  font-size: 1rem;
-  font-weight: 700;
-}
-
-.badge-text {
-  font-size: 0.6rem;
-  text-align: center;
-  line-height: 1;
-  margin-top: 0.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .product-info {
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .product-name {
@@ -280,8 +272,9 @@
 .product-description {
   color: #555;
   line-height: 1.5;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-size: 0.9rem;
+  flex-grow: 1;
 }
 
 .product-ideal-for {
@@ -306,28 +299,10 @@
 .product-actions {
   display: flex;
   gap: 0.75rem;
-  margin-bottom: 1rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
-.product-card .virtual-guide-box {
-  position: static;
-  background: #007bff;
-  color: white;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin-top: 1rem;
-  box-shadow: none;
-}
-
-.product-card .virtual-guide-icon {
-  display: flex;
-  align-items: center;
-}
 
 /* Responsive Design */
 @media (max-width: 1024px) {
