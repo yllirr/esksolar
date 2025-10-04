@@ -114,12 +114,6 @@ const SinglePhaseInverters = () => {
                     alt={product.name}
                     className="product-image"
                   />
-                  {product.endOfLife && (
-                    <div className="end-of-life-badge">
-                      <div className="badge-icon">A</div>
-                      <span className="badge-text">END OF LIFE</span>
-                    </div>
-                  )}
                 </div>
                 
                 <div className="product-info">

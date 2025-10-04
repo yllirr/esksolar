@@ -144,20 +144,6 @@
   object-fit: contain;
 }
 
-.end-of-life-badge {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  background: #dc3545;
-  color: white;
-  padding: 0.25rem 0.5rem;
-  border-radius: 4px;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
 .product-info {
   padding: 1.5rem;
