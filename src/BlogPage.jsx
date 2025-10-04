@@ -123,11 +123,11 @@ const BlogPage = () => {
               <div className="sidebar-section">
                 <h3 className="sidebar-title">Popular Categories</h3>
                 <div className="category-list">
-                  <a href="#" className="category-item">Technology</a>
-                  <a href="#" className="category-item">Tips & Guides</a>
-                  <a href="#" className="category-item">Investment</a>
-                  <a href="#" className="category-item">Finance</a>
-                  <a href="#" className="category-item">Maintenance</a>
+                  <button className="category-item">Technology</button>
+                  <button className="category-item">Tips & Guides</button>
+                  <button className="category-item">Investment</button>
+                  <button className="category-item">Finance</button>
+                  <button className="category-item">Maintenance</button>
                 </div>
               </div>
 
