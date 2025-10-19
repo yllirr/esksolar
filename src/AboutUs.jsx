@@ -1,25 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
 import './AboutUs.css';
 
 const AboutUs = () => {
   return (
     <>
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section className="about-us">
         <div className="container">

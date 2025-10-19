@@ -72,6 +72,14 @@
   z-index: 1001;
 }
 
+.desktop-nav {
+  display: flex;
+}
+
+.desktop-quote {
+  display: block;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
