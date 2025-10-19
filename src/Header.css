@@ -34,6 +34,13 @@
   justify-content: center;
 }
 
+/* Hide nav menu on mobile by default */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
 .nav-menu a {
   color: #333;
   text-decoration: none;
@@ -189,7 +196,7 @@
 @media (max-width: 768px) {
   .desktop-nav,
   .desktop-quote {
-    display: none;
+    display: none !important;
   }
   
   .mobile-menu-toggle {
@@ -206,10 +213,15 @@
   
   .nav-wrapper {
     padding: 0.5rem 0;
+    justify-content: space-between;
   }
   
   .logo {
     font-size: 1.1rem;
+  }
+  
+  .nav-menu {
+    display: none !important;
   }
 }
 
