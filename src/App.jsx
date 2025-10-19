@@ -20,6 +20,8 @@ import ElectricMobility from './ElectricMobility';
 import MonitoringSystems from './MonitoringSystems';
 import BlogPost from './BlogPost';
 import Contact from './Contact';
+import HomeProducts from './HomeProducts';
+import BusinessProducts from './BusinessProducts';
 import './App.css';
 
 function App() {
@@ -41,6 +43,18 @@ function App() {
           <Route path="/products" element={
             <>
               <Products />
+              <Footer />
+            </>
+          } />
+          <Route path="/products/home" element={
+            <>
+              <HomeProducts />
+              <Footer />
+            </>
+          } />
+          <Route path="/products/business" element={
+            <>
+              <BusinessProducts />
               <Footer />
             </>
           } />

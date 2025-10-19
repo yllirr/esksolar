@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './SolarOptions.css';
 
 const SolarOptions = () => {
@@ -21,10 +22,10 @@ const SolarOptions = () => {
               Solar for<br />
               your home
             </h2>
-            <button className="option-btn">
+            <Link to="/products/home" className="option-btn">
               Residence
               <span className="option-arrow">→</span>
-            </button>
+            </Link>
           </div>
         </div>
         
@@ -37,10 +38,10 @@ const SolarOptions = () => {
               Solar for your<br />
               business
             </h2>
-            <button className="option-btn">
+            <Link to="/products/business" className="option-btn">
               Commercial
               <span className="option-arrow">→</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div>

@@ -26,6 +26,35 @@
 .products-subtitle {
   color: #666;
   font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.category-tab {
+  padding: 0.75rem 1.5rem;
+  background: #f8f9fa;
+  color: #666;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
+}
+
+.category-tab:hover {
+  background: #e9ecef;
+  color: #140B02;
+}
+
+.category-tab.active {
+  background: #140B02;
+  color: #fff;
 }
 
 .products-grid {
@@ -97,6 +126,375 @@
 @media (max-width: 640px) {
   .products-grid { grid-template-columns: 1fr; }
   .products-title { font-size: 36px; }
+}
+
+/* Installer Section - Consistent with Website Design */
+.installer-section {
+  position: relative;
+  background: #f8f9fa;
+  padding: 4rem 0;
+  margin-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.installer-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.installer-pattern {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(20, 11, 2, 0.05) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(20, 11, 2, 0.03) 0%, transparent 50%);
+}
+
+.installer-content {
+  position: relative;
+  z-index: 2;
+}
+
+.installer-header {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.installer-badge {
+  display: inline-block;
+  background: #140B02;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.5rem;
+}
+
+.installer-question {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #140B02;
+  margin: 0 0 1.5rem;
+  line-height: 1.1;
+}
+
+.installer-description {
+  font-size: 1.125rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.installer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.installer-card {
+  position: relative;
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid #e5e5e5;
+}
+
+.installer-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.installer-card-primary {
+  background: #140B02;
+  color: white;
+}
+
+.installer-card-secondary {
+  background: white;
+  color: #140B02;
+  border: 2px solid #140B02;
+}
+
+.installer-card-tertiary {
+  background: white;
+  color: #140B02;
+  border: 2px solid #140B02;
+}
+
+.installer-icon {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+
+.icon-wrapper {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.installer-card-secondary .icon-wrapper,
+.installer-card-tertiary .icon-wrapper {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+}
+
+.icon-svg {
+  width: 30px;
+  height: 30px;
+  color: white;
+}
+
+.installer-card-secondary .icon-svg,
+.installer-card-tertiary .icon-svg {
+  color: #140B02;
+}
+
+.play-overlay {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 24px;
+  height: 24px;
+  background: #140B02;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.play-icon {
+  width: 12px;
+  height: 12px;
+  color: white;
+}
+
+.card-content {
+  text-align: center;
+}
+
+.installer-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.installer-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  opacity: 0.8;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+  opacity: 0.9;
+}
+
+.course-stats {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1;
+  margin-bottom: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.875rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.resource-count {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.count-item {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.installer-card-secondary .count-item,
+.installer-card-tertiary .count-item {
+  background: #f8f9fa;
+  border: 1px solid #e5e5e5;
+  color: #140B02;
+}
+
+.installer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.installer-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.installer-btn-primary {
+  background: white;
+  color: #140B02;
+  border: 1px solid white;
+}
+
+.installer-btn-primary:hover {
+  background: #f8f9fa;
+}
+
+.installer-btn-secondary {
+  background: #140B02;
+  color: white;
+  border: 1px solid #140B02;
+}
+
+.installer-btn-secondary:hover {
+  background: #000;
+}
+
+.installer-btn-tertiary {
+  background: #140B02;
+  color: white;
+  border: 1px solid #140B02;
+}
+
+.installer-btn-tertiary:hover {
+  background: #000;
+}
+
+.btn-arrow {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.installer-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+
+/* Responsive Design for Installer Section */
+@media (max-width: 1024px) {
+  .installer-grid {
+    gap: 1.5rem;
+  }
+  
+  .installer-card {
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .installer-section {
+    padding: 4rem 0;
+  }
+  
+  .installer-question {
+    font-size: 2.5rem;
+  }
+  
+  .installer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .installer-card {
+    padding: 2rem;
+  }
+  
+  .course-stats {
+    gap: 1.5rem;
+  }
+  
+  .resource-count {
+    gap: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .installer-section {
+    padding: 3rem 0;
+  }
+  
+  .installer-question {
+    font-size: 2rem;
+  }
+  
+  .installer-description {
+    font-size: 1rem;
+  }
+  
+  .installer-card {
+    padding: 1.5rem;
+  }
+  
+  .installer-title {
+    font-size: 1.5rem;
+  }
+  
+  .installer-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+  }
 }
 
 
