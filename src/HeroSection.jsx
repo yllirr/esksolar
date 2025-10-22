@@ -88,26 +88,15 @@ const HeroSection = () => {
               <div className="features-right">
                 <div className="feature-card">
                   <div className="feature-icon sun-icon">☀</div>
-                  <p className="feature-text">
-                    Exceptional Solar<br />
-                    and Battery<br />
-                    Performance
-                  </p>
+                  <p className="feature-text" dangerouslySetInnerHTML={{ __html: getTranslation(language, 'hero.feature1') }} />
                 </div>
                 <div className="feature-card">
                   <div className="feature-icon card-icon">💳</div>
-                  <p className="feature-text">
-                    Customized<br />
-                    Payment Solutions<br />
-                    for Your Home
-                  </p>
+                  <p className="feature-text" dangerouslySetInnerHTML={{ __html: getTranslation(language, 'hero.feature2') }} />
                 </div>
                 <div className="feature-card">
                   <div className="feature-icon headset-icon">🎧</div>
-                  <p className="feature-text">
-                    The SunPulse<br />
-                    Assurance
-                  </p>
+                  <p className="feature-text" dangerouslySetInnerHTML={{ __html: getTranslation(language, 'hero.feature3') }} />
                 </div>
               </div>
             </div>

@@ -1,7 +1,11 @@
 import React from 'react';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './Testimonials.css';
 
 const Testimonials = () => {
+  const { language } = useLanguage();
+  
   return (
     <section className="testimonials">
       <div className="testimonials-container">
@@ -13,15 +17,9 @@ const Testimonials = () => {
           <div className="testimonial-quote">
             <div className="quote-marks">"</div>
             <div className="stars">★★★★★</div>
-            <p className="testimonial-text">
-              It's convenient, we don't have to<br />
-              worry about it. SunPulse<br />
-              monitors it for us. If anything<br />
-              happens they will come out and<br />
-              fix it so we like that part.
-            </p>
-            <div className="testimonial-author">Haley - Litchfield Park, AZ</div>
-            <div className="testimonial-stats">00,000 homes and counting</div>
+            <p className="testimonial-text" dangerouslySetInnerHTML={{ __html: getTranslation(language, 'testimonials.text') }} />
+            <div className="testimonial-author">{getTranslation(language, 'testimonials.author')}</div>
+            <div className="testimonial-stats">{getTranslation(language, 'testimonials.stats')}</div>
           </div>
         </div>
       </div>

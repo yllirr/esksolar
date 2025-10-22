@@ -1,13 +1,16 @@
 import React from 'react';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './WhyChooseUs.css';
 
 const WhyChooseUs = () => {
+  const { language } = useLanguage();
+  
   return (
     <section className="hero-clean">
       <div className="hero-clean-container">
         <h1 className="hero-clean-title">
-          Shatter the Boundaries of<br />
-          Traditional Energy
+          {getTranslation(language, 'hero.title')}
         </h1>
         
         <div className="hero-clean-illustration">
@@ -15,12 +18,11 @@ const WhyChooseUs = () => {
         </div>
         
         <p className="hero-clean-subtitle">
-          Upgrade to Affordable, Dependable<br />
-          Solar and Battery Power
+          {getTranslation(language, 'hero.brightFuture')}
         </p>
         
         <button className="hero-clean-btn">
-          Get a Quote
+          {getTranslation(language, 'nav.getQuote')}
           <span className="btn-arrow">→</span>
         </button>
       </div>

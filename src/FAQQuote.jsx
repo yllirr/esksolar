@@ -57,40 +57,40 @@ const FAQQuote = () => {
             
             <div className="form-row">
               <div className="form-group">
-                <input type="text" placeholder="First Name" className="form-input" />
+                <input type="text" placeholder={getTranslation(language, 'quote.firstName')} className="form-input" />
               </div>
               <div className="form-group">
-                <input type="text" placeholder="Last Name" className="form-input" />
+                <input type="text" placeholder={getTranslation(language, 'quote.lastName')} className="form-input" />
               </div>
             </div>
             
             <div className="form-row">
               <div className="form-group">
-                <input type="text" placeholder="Zip Code" className="form-input" />
+                <input type="text" placeholder={getTranslation(language, 'quote.zipCode')} className="form-input" />
               </div>
               <div className="form-group">
-                <input type="tel" placeholder="Phone Number" className="form-input" />
+                <input type="tel" placeholder={getTranslation(language, 'quote.phoneNumber')} className="form-input" />
               </div>
             </div>
 
             <div className="form-group">
-              <label className="form-label">Do you own your own home?</label>
+              <label className="form-label">{getTranslation(language, 'quote.homeOwnership')}</label>
               <div className="radio-group">
                 <label className="radio-item">
                   <input type="radio" name="homeownership" value="yes" defaultChecked />
-                  <span className="radio-text">Yes</span>
+                  <span className="radio-text">{getTranslation(language, 'quote.yes')}</span>
                 </label>
                 <label className="radio-item">
                   <input type="radio" name="homeownership" value="no" />
-                  <span className="radio-text">No</span>
+                  <span className="radio-text">{getTranslation(language, 'quote.no')}</span>
                 </label>
                 {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a href="#" className="terms-link">Terms of Service</a>
+                <a href="#" className="terms-link">{getTranslation(language, 'quote.termsOfService')}</a>
               </div>
             </div>
 
             <div className="consent-text">
-              By clicking "Get a Quote", I consent to receive pre-recorded messages, text messages, and/or calls from SunPulse and its affiliates, including through the use of autodialers, artificial voice, and/or prerecorded calls or text messages, to the telephone number I provided above, even if my telephone number is on a "Do Not Call" list. I understand that message and data rates may apply and that I may opt out at any time by replying "STOP" to any text message I receive.
+              {getTranslation(language, 'quote.consent')}
             </div>
 
             <button className="quote-submit-btn">

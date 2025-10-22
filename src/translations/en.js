@@ -18,7 +18,10 @@ export const en = {
     solarBusiness: 'Solar for Your Business',
     residence: 'Residence',
     commercial: 'Commercial',
-    topPick: 'America\'s Top Pick for Home Solar and Energy Storage'
+    topPick: 'America\'s Top Pick for Home Solar and Energy Storage',
+    feature1: 'Exceptional Solar<br />and Battery<br />Performance',
+    feature2: 'Customized<br />Payment Solutions<br />for Your Home',
+    feature3: 'The SunPulse<br />Assurance'
   },
 
   // Products
@@ -232,7 +235,16 @@ export const en = {
     address: 'Address',
     message: 'Message',
     submit: 'Send Request',
-    success: 'Request sent successfully! We will contact you soon.'
+    success: 'Request sent successfully! We will contact you soon.',
+    firstName: 'First Name',
+    lastName: 'Last Name',
+    zipCode: 'Zip Code',
+    phoneNumber: 'Phone Number',
+    homeOwnership: 'Do you own your own home?',
+    yes: 'Yes',
+    no: 'No',
+    termsOfService: 'Terms of Service',
+    consent: 'By clicking "Get a Quote", I consent to receive pre-recorded messages, text messages, and/or calls from SunPulse and its affiliates, including through the use of autodialers, artificial voice, and/or prerecorded calls or text messages, to the telephone number I provided above, even if my telephone number is on a "Do Not Call" list. I understand that message and data rates may apply and that I may opt out at any time by replying "STOP" to any text message I receive.'
   },
 
   // Contact
@@ -263,6 +275,26 @@ export const en = {
     phone: 'Phone',
     email: 'Email',
     copyright: 'All rights reserved.'
+  },
+
+  // Testimonials
+  testimonials: {
+    text: 'It\'s convenient, we don\'t have to<br />worry about it. SunPulse<br />monitors it for us. If anything<br />happens they will come out and<br />fix it so we like that part.',
+    author: 'Haley - Litchfield Park, AZ',
+    stats: '00,000 homes and counting'
+  },
+
+  // Plan & Pricing
+  planPricing: {
+    subtitle: 'PLAN & PRICING',
+    title: 'Smart Savings. Easy Living',
+    description: 'From installation to maintenance, enjoy an effortless and affordable solar experience with the SunPulse Plan solar lease.',
+    features: {
+      feature1: 'Best-in-class solar panels and battery storage',
+      feature2: '25-year equipment guarantee',
+      feature3: 'Predictable monthly payments with locked-in rates'
+    },
+    ctaButton: 'Get a Quote'
   },
 
   // Common

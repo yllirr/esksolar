@@ -57,7 +57,7 @@ const BlogPost = () => {
           </div>
 
           <div className="post-image">
-            <img src={`/foto/blog/${post.image}`} alt={post.title} />
+            <img src={`${process.env.PUBLIC_URL}/foto/blog/${post.image}`} alt={post.title} />
           </div>
 
           <div className="post-body">

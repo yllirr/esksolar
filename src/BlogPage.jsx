@@ -27,7 +27,7 @@ const BlogPage = () => {
               {blogPosts.map((post) => (
                 <article key={post.id} className="blog-card">
                   <div className="blog-image">
-                    <img src={`/foto/blog/${post.image}`} alt={post.title} />
+                    <img src={`${process.env.PUBLIC_URL}/foto/blog/${post.image}`} alt={post.title} />
                     <div className="blog-category">{post.category}</div>
                   </div>
                   <div className="blog-card-content">

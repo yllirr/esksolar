@@ -18,7 +18,10 @@ export const sq = {
     solarBusiness: 'Diell për Biznesin Tuaj',
     residence: 'Rezidenca',
     commercial: 'Komerciale',
-    topPick: 'Zgjedhja Kryesore e Amerikës për Diellin Shtëpiak dhe Ruajtjen e Energjisë'
+    topPick: 'Zgjedhja Kryesore e Amerikës për Diellin Shtëpiak dhe Ruajtjen e Energjisë',
+    feature1: 'Performancë e Jashtëzakonshme Diellore<br />dhe Baterie',
+    feature2: 'Zgjidhje të Personalizuara<br />Pagese për Shtëpinë Tuaj',
+    feature3: 'Garantia SunPulse'
   },
 
   // Products
@@ -141,7 +144,7 @@ export const sq = {
         date: "5 Mars 2024",
         readTime: "8 min lexim",
         category: "Instalimi",
-        image: "solar-installation.jpg",
+        image: "solar-incentives.jpg",
         tags: ["Instalimi", "Panele Diellore", "Procesi", "Planifikimi"],
         content: `
           <p>Instalimi i paneleve diellore është një proces i planifikuar që kërkon vëmendje ndaj detajeve për të siguruar performancë optimale dhe siguri maksimale.</p>
@@ -234,7 +237,16 @@ export const sq = {
     address: 'Adresa',
     message: 'Mesazhi',
     submit: 'Dërgo Kërkesën',
-    success: 'Kërkesa u dërgua me sukses! Do t\'ju kontaktojmë së shpejti.'
+    success: 'Kërkesa u dërgua me sukses! Do t\'ju kontaktojmë së shpejti.',
+    firstName: 'Emri',
+    lastName: 'Mbiemri',
+    zipCode: 'Kodi Postar',
+    phoneNumber: 'Numri i Telefonit',
+    homeOwnership: 'A e zotëroni shtëpinë tuaj?',
+    yes: 'Po',
+    no: 'Jo',
+    termsOfService: 'Kushtet e Shërbimit',
+    consent: 'Duke klikuar "Merr Ofertë", unë pranoj të marr mesazhe të regjistruara paraprakisht, mesazhe teksti dhe/ose thirrje nga SunPulse dhe filialet e saj, duke përfshirë përmes përdorimit të autodialerëve, zërit artificial dhe/ose thirrjeve ose mesazheve teksti të regjistruara paraprakisht, në numrin e telefonit që dhashë më lart, edhe nëse numri im i telefonit është në një listë "Mos Thirr". Kuptoj që mund të aplikohen tarifat për mesazhet dhe të dhënat dhe që mund të tërhiqem në çdo kohë duke u përgjigjur "STOP" ndaj çdo mesazhi teksti që marr.'
   },
 
   // Contact
@@ -265,6 +277,26 @@ export const sq = {
     phone: 'Telefoni',
     email: 'Email',
     copyright: 'Të gjitha të drejtat e rezervuara.'
+  },
+
+  // Testimonials
+  testimonials: {
+    text: 'Është i përshtatshëm, nuk duhet të<br />shqetësohemi për të. SunPulse<br />e monitoron për ne. Nëse ndodh<br />diçka, ata do të vijnë dhe<br />do ta rregullojnë, kështu që na pëlqen ajo pjesë.',
+    author: 'Haley - Litchfield Park, AZ',
+    stats: '00,000 shtëpi dhe duke numëruar'
+  },
+
+  // Plan & Pricing
+  planPricing: {
+    subtitle: 'PLAN & PRICING',
+    title: 'Kursime të Mençura. Jetë e Lehtë',
+    description: 'Nga instalimi deri te mirëmbajtja, shijoni një përvojë diellore të lehtë dhe të përballueshme me planin e qirasë diellore SunPulse.',
+    features: {
+      feature1: 'Panele diellore dhe ruajtje baterie të klasit më të mirë',
+      feature2: 'Garantia 25-vjeçare e pajisjeve',
+      feature3: 'Pagesa mujore të parashikueshme me norma të fiksuara'
+    },
+    ctaButton: 'Merr Ofertë'
   },
 
   // Common

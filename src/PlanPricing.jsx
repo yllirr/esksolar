@@ -1,18 +1,21 @@
 import React from 'react';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './PlanPricing.css';
 
 const PlanPricing = () => {
+  const { language } = useLanguage();
+  
   return (
     <section className="plan-pricing">
       <div className="plan-pricing-wrapper">
         {/* Left Side - Content */}
         <div className="plan-content-section">
           <div className="plan-content">
-            <span className="plan-subtitle">PLAN & PRICING</span>
-            <h2 className="plan-title">Smart Savings. Easy Living</h2>
+            <span className="plan-subtitle">{getTranslation(language, 'planPricing.subtitle')}</span>
+            <h2 className="plan-title">{getTranslation(language, 'planPricing.title')}</h2>
             <p className="plan-description">
-              From installation to maintenance, enjoy an effortless and affordable 
-              solar experience with the SunPulse Plan solar lease.
+              {getTranslation(language, 'planPricing.description')}
             </p>
             
             <div className="plan-features">
@@ -20,26 +23,26 @@ const PlanPricing = () => {
                 <div className="plan-feature-icon">
                   <img src="/foto/icons/Frame 35.png" alt="" className="feature-icon-img" />
                 </div>
-                <p className="plan-feature-text">Best-in-class solar panels and battery storage</p>
+                <p className="plan-feature-text">{getTranslation(language, 'planPricing.features.feature1')}</p>
               </div>
 
               <div className="plan-feature">
                 <div className="plan-feature-icon">
                   <img src="/foto/icons/Frame 36.png" alt="" className="feature-icon-img" />
                 </div>
-                <p className="plan-feature-text">25-year equipment guarantee</p>
+                <p className="plan-feature-text">{getTranslation(language, 'planPricing.features.feature2')}</p>
               </div>
 
               <div className="plan-feature">
                 <div className="plan-feature-icon">
                   <img src="/foto/icons/Frame 38.png" alt="" className="feature-icon-img" />
                 </div>
-                <p className="plan-feature-text">Predictable monthly payments with locked-in rates</p>
+                <p className="plan-feature-text">{getTranslation(language, 'planPricing.features.feature3')}</p>
               </div>
             </div>
 
             <button className="plan-cta-btn">
-              Get a Quote
+              {getTranslation(language, 'planPricing.ctaButton')}
               <span className="btn-arrow">→</span>
             </button>
           </div>
