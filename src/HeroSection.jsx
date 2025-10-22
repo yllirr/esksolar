@@ -1,32 +1,31 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './HeroSection.css';
 
 const HeroSection = () => {
   const [isNightMode, setIsNightMode] = useState(false);
-  const [isShineActive, setIsShineActive] = useState(false);
-  const [mousePercent, setMousePercent] = useState({ x: 50, y: 50 });
   const brightRef = useRef(null);
-
-  const shineStyle = {
-    '--mx': `${mousePercent.x}%`,
-    '--my': `${mousePercent.y}%`,
-  };
+  const { language } = useLanguage();
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const triggerPoint = 300; // Kur të scroll-ojmë 300px, ndryshon në natë
+    let lastScrollY = window.scrollY;
+    const triggerPoint = 300;
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
       
-      if (scrollPosition > triggerPoint) {
-        setIsNightMode(true);
-      } else {
-        setIsNightMode(false);
+      // Only update if we cross the threshold
+      if ((lastScrollY <= triggerPoint && currentScrollY > triggerPoint) ||
+          (lastScrollY > triggerPoint && currentScrollY <= triggerPoint)) {
+        setIsNightMode(currentScrollY > triggerPoint);
+        lastScrollY = currentScrollY;
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
@@ -38,33 +37,21 @@ const HeroSection = () => {
         <div className="container">
           <div className="hero-top">
             <div className="hero-left">
-              <p className="joined-count">1,042,034 JOINED</p>
+              <p className="joined-count">1,042,034 {getTranslation(language, 'hero.joined')}</p>
               <h1 className="hero-heading">
-                Step into Tomorrow Like Never Before.<br />
-                Experience Advanced Solar Power.
+                {getTranslation(language, 'hero.title')}
               </h1>
               <button className="btn-get-quote">
-                Get a Quote
+                {getTranslation(language, 'nav.getQuote')}
                 <span className="arrow">→</span>
               </button>
             </div>
             <div className="hero-right">
               <h2
                 ref={brightRef}
-                className={`bright-future ${isShineActive ? 'shine-active' : ''}`}
-                style={shineStyle}
-                onMouseEnter={() => setIsShineActive(true)}
-                onMouseLeave={() => setIsShineActive(false)}
-                onMouseMove={(e) => {
-                  const target = brightRef.current;
-                  if (!target) return;
-                  const rect = target.getBoundingClientRect();
-                  const x = ((e.clientX - rect.left) / rect.width) * 100;
-                  const y = ((e.clientY - rect.top) / rect.height) * 100;
-                  setMousePercent({ x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) });
-                }}
+                className="bright-future"
               >
-                BRIGHT<br />FUTURE
+                {getTranslation(language, 'hero.brightFuture')}
               </h2>
             </div>
           </div>
@@ -78,9 +65,7 @@ const HeroSection = () => {
                          <div className="image-container">
                            <div className="image-overlay">
                              <h3 className="overlay-text">
-                               America's Top Pick<br />
-                               for Home Solar and<br />
-                               Energy Storage
+                               {getTranslation(language, 'hero.topPick')}
                              </h3>
                            </div>
                          </div>

@@ -69,6 +69,44 @@
   background: #f5f5f5;
 }
 
+/* Language Toggle */
+.language-toggle {
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-right: 1rem;
+}
+
+.language-toggle:hover {
+  background: #333;
+  color: white;
+}
+
+.language-toggle-mobile {
+  background: transparent;
+  border: 2px solid #333;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 0.5rem 1rem;
+  width: calc(100% - 2rem);
+}
+
+.language-toggle-mobile:hover {
+  background: #333;
+  color: white;
+}
+
 /* Mobile Menu Styles */
 .mobile-menu-toggle {
   display: none;

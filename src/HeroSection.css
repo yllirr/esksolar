@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Header Navigation */
 .header {
   background: white;
@@ -188,7 +193,7 @@
   background-position: center;
   background-repeat: no-repeat;
   min-height: 700px;
-  transition: all 1.5s ease-in-out;
+  transition: opacity 0.4s ease;
 }
 
 .image-section.day-mode {
@@ -229,7 +234,8 @@
   left: 3rem;
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   padding: 2.5rem 2rem;
   border-radius: 8px;
   max-width: 350px;

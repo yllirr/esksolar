@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './Header.css';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language, changeLanguage, isAlbanian } = useLanguage();
 
   return (
     <header className="header">
@@ -13,14 +16,23 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="nav-menu desktop-nav">
-            <Link to="/">Home</Link>
-            <Link to="/products">Products</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/">{getTranslation(language, 'nav.home')}</Link>
+            <Link to="/products">{getTranslation(language, 'nav.products')}</Link>
+            <Link to="/blog">{getTranslation(language, 'nav.blog')}</Link>
+            <Link to="/contact">{getTranslation(language, 'nav.contact')}</Link>
           </nav>
           
+          {/* Language Toggle */}
+          <button 
+            className="language-toggle desktop-quote"
+            onClick={() => changeLanguage(isAlbanian ? 'en' : 'sq')}
+            title={isAlbanian ? 'Switch to English' : 'Kthehu në Shqip'}
+          >
+            {isAlbanian ? 'EN' : 'SQ'}
+          </button>
+          
           {/* Desktop Quote Button */}
-          <button className="btn-quote-header desktop-quote">Get a Quote</button>
+          <button className="btn-quote-header desktop-quote">{getTranslation(language, 'nav.getQuote')}</button>
           
           {/* Mobile Menu Toggle */}
           <button 
@@ -38,11 +50,20 @@ const Header = () => {
         
         {/* Mobile Navigation */}
         <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
-          <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>Home</Link>
-          <Link to="/products" onClick={() => setIsMobileMenuOpen(false)}>Products</Link>
-          <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>Blog</Link>
-          <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
-          <button className="btn-quote-mobile">Get a Quote</button>
+          <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.home')}</Link>
+          <Link to="/products" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.products')}</Link>
+          <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.blog')}</Link>
+          <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.contact')}</Link>
+          
+          {/* Mobile Language Toggle */}
+          <button 
+            className="language-toggle-mobile"
+            onClick={() => changeLanguage(isAlbanian ? 'en' : 'sq')}
+          >
+            {isAlbanian ? 'English' : 'Shqip'}
+          </button>
+          
+          <button className="btn-quote-mobile">{getTranslation(language, 'nav.getQuote')}</button>
         </nav>
       </div>
     </header>
