@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './ElectricMobility.css';
 
 const ElectricMobility = () => {
+  const { language } = useLanguage();
   const ELECTRIC_PRODUCTS = [
     {
       id: 1,
@@ -32,30 +36,16 @@ const ElectricMobility = () => {
 
   return (
     <div className="electric-mobility-page">
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumbs */}
       <div className="breadcrumbs">
         <div className="container">
-          <Link to="/">HOME</Link>
+          <Link to="/">{getTranslation(language, 'nav.home')}</Link>
           <span className="separator">></span>
-          <Link to="/products">PRODUCTS</Link>
+          <Link to="/products">{getTranslation(language, 'nav.products')}</Link>
           <span className="separator">></span>
-          <span className="current">ELECTRIC MOBILITY</span>
+          <span className="current">{getTranslation(language, 'products.electricMobilityPage.title')}</span>
         </div>
       </div>
 
@@ -63,11 +53,9 @@ const ElectricMobility = () => {
       <div className="container">
         <div className="page-header">
           <div className="page-title-section">
-            <h1 className="page-title">Electric Mobility</h1>
+            <h1 className="page-title">{getTranslation(language, 'products.electricMobilityPage.title')}</h1>
             <p className="page-description">
-              The Zucchetti Centro Sistemi (ZCS) chargers are available in two models with power capacities of 7kW and 22kW, 
-              single and three-phase, smart and connectable to any existing photovoltaic system, as well as the ZCS Azzurro 
-              production and storage inverters.
+              {getTranslation(language, 'products.electricMobilityPage.description1')}
             </p>
           </div>
           <div className="page-image">

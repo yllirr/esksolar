@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './StorageInverters.css';
 
 const StorageInverters = () => {
+  const { language } = useLanguage();
   const STORAGE_PRODUCTS = [
     {
       id: 1,
@@ -56,30 +60,16 @@ const StorageInverters = () => {
 
   return (
     <div className="storage-inverters-page">
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumbs */}
       <div className="breadcrumbs">
         <div className="container">
-          <Link to="/">HOME</Link>
+          <Link to="/">{getTranslation(language, 'nav.home')}</Link>
           <span className="separator">></span>
-          <Link to="/products">PRODUCTS</Link>
+          <Link to="/products">{getTranslation(language, 'nav.products')}</Link>
           <span className="separator">></span>
-          <span className="current">STORAGE INVERTER</span>
+          <span className="current">{getTranslation(language, 'products.storageInvertersPage.title')}</span>
         </div>
       </div>
 
@@ -87,14 +77,12 @@ const StorageInverters = () => {
       <div className="container">
         <div className="page-header">
           <div className="page-title-section">
-            <h1 className="page-title">Storage Inverter</h1>
+            <h1 className="page-title">{getTranslation(language, 'products.storageInvertersPage.title')}</h1>
             <p className="page-description">
-              ZCS Azzurro Storage Inverters are ideal for optimizing energy independence in residential and commercial buildings. 
-              Easy installation and automatic configuration make them perfect for both retrofit and hybrid applications.
+              {getTranslation(language, 'products.storageInvertersPage.description1')}
             </p>
             <p className="page-description">
-              Our storage inverters offer nominal power from 3 kW to 20 kW and storage capacity up to 25 kWh, 
-              with the ability to operate in stand-alone mode for power continuity during blackouts.
+              {getTranslation(language, 'products.storageInvertersPage.description2')}
             </p>
           </div>
           <div className="page-image">

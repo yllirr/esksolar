@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './ThreePhaseInverters.css';
 
 const THREE_PHASE_PRODUCTS = [
@@ -83,23 +86,10 @@ const THREE_PHASE_PRODUCTS = [
 ];
 
 const ThreePhaseInverters = () => {
+  const { language } = useLanguage();
   return (
     <>
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section className="three-phase-page">
         <div className="container">
@@ -115,15 +105,15 @@ const ThreePhaseInverters = () => {
           {/* Page Header */}
           <div className="page-header">
             <div className="page-title-section">
-              <h1 className="page-title">Three-phase Inverter</h1>
+              <h1 className="page-title">{getTranslation(language, 'products.threePhasePage.title')}</h1>
               <p className="page-description">
-                The ZCS Azzurro three-phase inverters are the best solution for medium-size photovoltaic systems to be installed in commercial and industrial buildings.
+                {getTranslation(language, 'products.threePhasePage.description1')}
               </p>
               <p className="page-description">
-                The advanced technology developed by ZCS makes the Azzurro three-phase inverters efficient, versatile and highly functional.
+                {getTranslation(language, 'products.threePhasePage.description2')}
               </p>
               <p className="page-description">
-                Available in sizes from 3.3 to 136 Kw, they are easy to configure, safe and robust and able to adapt to every type of need, for both new installations and retrofitting of existing ones.
+                {getTranslation(language, 'products.threePhasePage.description3')}
               </p>
             </div>
             <div className="page-image">

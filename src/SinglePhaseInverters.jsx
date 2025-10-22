@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './SinglePhaseInverters.css';
 
 const SINGLE_PHASE_PRODUCTS = [
@@ -45,23 +48,10 @@ const SINGLE_PHASE_PRODUCTS = [
 ];
 
 const SinglePhaseInverters = () => {
+  const { language } = useLanguage();
   return (
     <>
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section className="single-phase-page">
         <div className="container">
@@ -77,15 +67,15 @@ const SinglePhaseInverters = () => {
           {/* Page Header */}
           <div className="page-header">
             <div className="page-title-section">
-              <h1 className="page-title">Single-phase Inverter</h1>
+              <h1 className="page-title">{getTranslation(language, 'products.singlePhasePage.title')}</h1>
               <p className="page-description">
-                The ZCS Azzurro single-phase inverters are the ideal solution for small photovoltaic systems in residential or commercial buildings. Available in sizes from 1 to 6 Kw, they are small, easy to manage and easy to install.
+                {getTranslation(language, 'products.singlePhasePage.description1')}
               </p>
               <p className="page-description">
-                The wide range of input makes them easy to configure and suitable for any type of need, both for new installations and for retrofitting existing ones.
+                {getTranslation(language, 'products.singlePhasePage.description2')}
               </p>
               <p className="page-description">
-                The graphic or alphanumeric display (depending on the model) allows you to consult the inverter data, while Wi-Fi connectivity allows remote monitoring anytime and anywhere.
+                {getTranslation(language, 'products.singlePhasePage.description3')}
               </p>
             </div>
             <div className="page-image">

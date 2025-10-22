@@ -6,14 +6,14 @@ import { getTranslation } from './translations';
 import './Products.css';
 
 const PRODUCTS = [
-  { key: 'single-phase', title: 'Single-phase Inverter', desc: 'High-efficiency residential inverters for small to medium systems.' },
-  { key: 'three-phase', title: 'Three-phase Inverter', desc: 'Reliable power conversion for larger residential and commercial arrays.' },
-  { key: 'storage-inverter', title: 'Storage Inverter', desc: 'Hybrid solutions enabling PV + battery integration and optimized self-consumption.' },
-  { key: 'retrofit-storage', title: 'Outdoor retrofit storage system', desc: 'Add batteries to existing PV systems without replacing the inverter.' },
-  { key: 'lv-batteries', title: 'LV Batteries', desc: 'Low-voltage lithium modules with scalable capacity and smart BMS.' },
-  { key: 'hv-batteries', title: 'HV Batteries', desc: 'High-voltage battery stacks designed for higher efficiency and faster charge.' },
-  { key: 'e-mobility', title: 'Electric Mobility', desc: 'EV charging and accessories to power clean transportation.' },
-  { key: 'monitoring', title: 'Monitoring Systems', desc: 'Cloud-connected monitoring, apps and gateways for full visibility.' },
+  { key: 'single-phase', translationKey: 'singlePhase' },
+  { key: 'three-phase', translationKey: 'threePhase' },
+  { key: 'storage-inverter', translationKey: 'storageInverter' },
+  { key: 'retrofit-storage', translationKey: 'retrofitStorage' },
+  { key: 'lv-batteries', translationKey: 'lvBatteries' },
+  { key: 'hv-batteries', translationKey: 'hvBatteries' },
+  { key: 'e-mobility', translationKey: 'eMobility' },
+  { key: 'monitoring', translationKey: 'monitoring' },
 ];
 
 const Products = () => {
@@ -93,8 +93,8 @@ const Products = () => {
                 )}
               </div>
               <div className="product-info">
-                <h3 className="product-name">{p.title}</h3>
-                <p className="product-desc">{p.desc}</p>
+                <h3 className="product-name">{getTranslation(language, `products.productList.${p.translationKey}.title`)}</h3>
+                <p className="product-desc">{getTranslation(language, `products.productList.${p.translationKey}.description`)}</p>
                 <Link 
                   to={
                     p.key === 'single-phase' ? '/products/single-phase-inverters' :

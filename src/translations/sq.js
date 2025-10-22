@@ -45,7 +45,82 @@ export const sq = {
     installerSubtitle: 'Mjetet dhe burimet për profesionistët',
     faq: 'ZCS Azzurro FAQ',
     training: 'Kurse Trajnimi',
-    documentation: 'Dokumentimi dhe Video Tutorials'
+    documentation: 'Dokumentimi dhe Video Tutorials',
+    productList: {
+      singlePhase: {
+        title: 'Inverter Njëfazor',
+        description: 'Inverterë të efikasitetit të lartë për sistemet e vogla dhe të mesme rezidenciale.'
+      },
+      threePhase: {
+        title: 'Inverter Trefazor',
+        description: 'Konvertim i besueshëm i energjisë për vargje më të mëdha rezidenciale dhe komerciale.'
+      },
+      storageInverter: {
+        title: 'Inverter Ruajtjeje',
+        description: 'Zgjidhje hibrid që lejojnë integrimin PV + bateri dhe vetë-konsum të optimizuar.'
+      },
+      retrofitStorage: {
+        title: 'Sistem Ruajtjeje i Jashtëm',
+        description: 'Shtoni bateri në sistemet ekzistuese PV pa zëvendësuar inverterin.'
+      },
+      lvBatteries: {
+        title: 'Bateri Tension të Ulët',
+        description: 'Module litiumi tension të ulët me kapacitet të shkallëzueshëm dhe BMS të zgjuar.'
+      },
+      hvBatteries: {
+        title: 'Bateri Tension të Lartë',
+        description: 'Stive baterie tension të lartë të dizajnuara për efikasitet më të lartë dhe ngarkim më të shpejtë.'
+      },
+      eMobility: {
+        title: 'Mobilitet Elektrik',
+        description: 'Ngarkim EV dhe aksesorë për të fuqizuar transportin e pastër.'
+      },
+      monitoring: {
+        title: 'Sistemet e Monitorimit',
+        description: 'Monitorim i lidhur me cloud, aplikacione dhe porta për dukshmëri të plotë.'
+      }
+    },
+    // Individual product pages
+    singlePhasePage: {
+      title: 'Inverter Njëfazor',
+      description1: 'Inverterët njëfazorë ZCS Azzurro janë zgjidhja ideale për sistemet e vogla fotovoltaike në ndërtesa rezidenciale ose komerciale. Të disponueshëm në madhësi nga 1 deri në 6 Kw, ata janë të vegjël, të lehtë për t\'u menaxhuar dhe të lehtë për t\'u instaluar.',
+      description2: 'Gama e gjerë e hyrjes i bën të lehtë për t\'u konfiguruar dhe të përshtatshëm për çdo lloj nevoje, si për instalime të reja ashtu edhe për modernizimin e atyre ekzistuese.',
+      description3: 'Ekrani grafik ose alfanumerik (në varësi të modelit) ju lejon të konsultoni të dhënat e inverterit, ndërsa lidhja Wi-Fi lejon monitorimin e largët në çdo kohë dhe kudo.'
+    },
+    threePhasePage: {
+      title: 'Inverter Trefazor',
+      description1: 'Inverterët trefazorë ZCS Azzurro janë zgjidhja më e mirë për sistemet fotovoltaike të madhësisë së mesme që do të instalohen në ndërtesa komerciale dhe industriale.',
+      description2: 'Teknologjia e avancuar e zhvilluar nga ZCS i bën inverterët trefazorë Azzurro efikasë, të shumëanshëm dhe shumë funksionalë.',
+      description3: 'Të disponueshëm në madhësi nga 3.3 deri në 136 Kw, ata janë të lehtë për t\'u konfiguruar, të sigurt dhe të fortë dhe të aftë për t\'u përshtatur me çdo lloj nevoje, si për instalime të reja ashtu edhe për modernizimin e atyre ekzistuese.'
+    },
+    lvBatteriesPage: {
+      title: 'Bateri Tension të Ulët',
+      description1: 'Module litiumi tension të ulët me kapacitet të shkallëzueshëm dhe BMS të zgjuar. Sistemet tona të baterive LV ofrojnë zgjidhje të besueshme ruajtjeje energjie për aplikime rezidenciale dhe komerciale.',
+      description2: 'Duke përfshirë sisteme të avancuara menaxhimi baterie, këto module ofrojnë performancë të shkëlqyer, jetëgjatësi të gjatë cikli dhe instalim të lehtë për pavarësi optimale energjie.'
+    },
+    hvBatteriesPage: {
+      title: 'Bateri Tension të Lartë',
+      description1: 'Bateritë e tensionit të lartë për inverterët hibrid trefazorë ZCS Azzurro dhe sistemet e ruajtjes janë zgjidhja më e mirë për optimizimin e pavarësisë energjetike në aplikime rezidenciale.',
+      description2: 'Të afta për t\'u instaluar në seri deri në një kapacitet prej 60kWh, ato janë ideale për instalime ruajtjeje me inverterët ZCS Azzurro. Ato konfigurohen vetë, kështu që nuk ka nevojë për cilësime manuale.'
+    },
+    storageInvertersPage: {
+      title: 'Inverter Ruajtjeje',
+      description1: 'Inverterët e Ruajtjes ZCS Azzurro janë idealë për optimizimin e pavarësisë energjetike në ndërtesa rezidenciale dhe komerciale. Instalimi i lehtë dhe konfigurimi automatik i bënë ato të përsosura për aplikime retrofit dhe hibrid.',
+      description2: 'Inverterët tanë të ruajtjes ofrojnë fuqi nominale nga 3 kW deri në 20 kW dhe kapacitet ruajtjeje deri në 25 kWh, me aftësinë për të operuar në modalitet të pavarur për vazhdimësi energjie gjatë prishjeve.'
+    },
+    outdoorRetrofitPage: {
+      title: 'Sistem Ruajtjeje i Jashtëm',
+      description1: 'Sistemi i ri i retrofitit të ruajtjes së jashtme është ideal për instalime industriale me fuqi të madhe. Sistemi modulohet sipas nevojave të klientit dhe është i disponueshëm me fuqi nga 1.25 deri në 750 kW dhe kapacitet nga 250 kWh deri në 1.5 MWh.',
+      description2: 'Sistemi është i pajisur me një sistem shuarje zjarri me sensorë të integruar dhe monitorim si dhe ftohje me lëng. Instalimi është i thjeshtë, falë modalitetit Plug & Play.'
+    },
+    electricMobilityPage: {
+      title: 'Mobilitet Elektrik',
+      description1: 'Ngarkuesit Zucchetti Centro Sistemi (ZCS) janë të disponueshëm në dy modele me kapacitete fuqie prej 7kW dhe 22kW, njëfazorë dhe trefazorë, të zgjuar dhe të lidhshëm me çdo sistem fotovoltaik ekzistues, si dhe inverterët e prodhimit dhe ruajtjes ZCS Azzurro.'
+    },
+    monitoringSystemsPage: {
+      title: 'Sistemet e Monitorimit',
+      description1: 'Sistemet e monitorimit ZCS Azzurro janë zgjidhja ideale për kontrollin e plotë dhe dukshmërinë e të gjitha parametrave të rëndësishëm për fabrikat e të gjitha llojeve.'
+    }
   },
 
   // About Us

@@ -1,49 +1,48 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './Products.css';
 
 const HomeProducts = () => {
+  const { language } = useLanguage();
+  
   // 6 produkte për shtëpi (random nga lista)
   const HOME_PRODUCTS = [
     { 
       key: 'single-phase', 
-      title: 'Single-phase Inverter', 
-      desc: 'High-efficiency residential inverters for small to medium systems.',
+      translationKey: 'singlePhase',
       image: '/products/single-phase-inverters/main.png',
       link: '/products/single-phase-inverters'
     },
     { 
       key: 'storage-inverter', 
-      title: 'Storage Inverter', 
-      desc: 'Hybrid solutions enabling PV + battery integration and optimized self-consumption.',
+      translationKey: 'storageInverter',
       image: '/products/storage-inverter/storage-main.png',
       link: '/products/storage-inverters'
     },
     { 
       key: 'lv-batteries', 
-      title: 'LV Batteries', 
-      desc: 'Low-voltage lithium modules with scalable capacity and smart BMS.',
+      translationKey: 'lvBatteries',
       image: '/products/lv-batteries/lv-batteries-main.png',
       link: '/products/lv-batteries'
     },
     { 
       key: 'hv-batteries', 
-      title: 'HV Batteries', 
-      desc: 'High-voltage battery stacks designed for higher efficiency and faster charge.',
+      translationKey: 'hvBatteries',
       image: '/products/hv-batteries/hv-batteries-main.png',
       link: '/products/hv-batteries'
     },
     { 
       key: 'e-mobility', 
-      title: 'Electric Mobility', 
-      desc: 'EV charging and accessories to power clean transportation.',
+      translationKey: 'eMobility',
       image: '/products/electric/electric-main.png',
       link: '/products/electric-mobility'
     },
     { 
       key: 'monitoring', 
-      title: 'Monitoring Systems', 
-      desc: 'Cloud-connected monitoring, apps and gateways for full visibility.',
+      translationKey: 'monitoring',
       image: '/products/monitoring-systems/monitoring-system-main.png',
       link: '/products/monitoring-systems'
     }
@@ -51,32 +50,18 @@ const HomeProducts = () => {
 
   return (
     <>
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section id="products" className="products">
         <div className="products-container">
           <header className="products-header">
-            <h2 className="products-title">Home Products</h2>
-            <p className="products-subtitle">Solar solutions designed for residential homes</p>
+            <h2 className='products-title'>{getTranslation(language, 'products.homeProducts')}</h2>
+            <p className='products-subtitle'>{getTranslation(language, 'products.subtitle')}</p>
             
             {/* Category Tabs */}
             <div className="category-tabs">
-              <Link to="/products/home" className="category-tab active">Home Products</Link>
-              <Link to="/products/business" className="category-tab">Business Products</Link>
+              <Link to="/products/home" className="category-tab active">{getTranslation(language, 'products.homeProducts')}</Link>
+              <Link to="/products/business" className="category-tab">{getTranslation(language, 'products.businessProducts')}</Link>
             </div>
           </header>
 
@@ -91,10 +76,10 @@ const HomeProducts = () => {
                   />
                 </div>
                 <div className="product-info">
-                  <h3 className="product-name">{p.title}</h3>
-                  <p className="product-desc">{p.desc}</p>
+                  <h3 className="product-name">{getTranslation(language, `products.productList.${p.translationKey}.title`)}</h3>
+                  <p className="product-desc">{getTranslation(language, `products.productList.${p.translationKey}.description`)}</p>
                   <Link to={p.link} className="product-cta">
-                    Learn more <span className="arrow">→</span>
+                    {getTranslation(language, 'products.learnMore')} <span className="arrow">→</span>
                   </Link>
                 </div>
               </article>

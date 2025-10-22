@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './MonitoringSystems.css';
 
 const MonitoringSystems = () => {
+  const { language } = useLanguage();
   const MONITORING_PRODUCTS = [
     {
       id: 1,
@@ -32,30 +36,16 @@ const MonitoringSystems = () => {
 
   return (
     <div className="monitoring-systems-page">
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumbs */}
       <div className="breadcrumbs">
         <div className="container">
-          <Link to="/">HOME</Link>
+          <Link to="/">{getTranslation(language, 'nav.home')}</Link>
           <span className="separator">></span>
-          <Link to="/products">PRODUCTS</Link>
+          <Link to="/products">{getTranslation(language, 'nav.products')}</Link>
           <span className="separator">></span>
-          <span className="current">MONITORING SYSTEMS</span>
+          <span className="current">{getTranslation(language, 'products.monitoringSystemsPage.title')}</span>
         </div>
       </div>
 
@@ -63,10 +53,9 @@ const MonitoringSystems = () => {
       <div className="container">
         <div className="page-header">
           <div className="page-title-section">
-            <h1 className="page-title">Monitoring Systems</h1>
+            <h1 className="page-title">{getTranslation(language, 'products.monitoringSystemsPage.title')}</h1>
             <p className="page-description">
-              The ZCS Azzurro monitoring systems are the ideal solution for the complete control and visibility 
-              of all the important parameters for plants of all types.
+              {getTranslation(language, 'products.monitoringSystemsPage.description1')}
             </p>
           </div>
           <div className="page-image">

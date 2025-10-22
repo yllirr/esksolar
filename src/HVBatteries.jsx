@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './HVBatteries.css';
 
 const HVBatteries = () => {
+  const { language } = useLanguage();
   const HV_PRODUCTS = [
     {
       id: 1,
@@ -26,30 +30,16 @@ const HVBatteries = () => {
 
   return (
     <div className="hv-batteries-page">
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumbs */}
       <div className="breadcrumbs">
         <div className="container">
-          <Link to="/">HOME</Link>
+          <Link to="/">{getTranslation(language, 'nav.home')}</Link>
           <span className="separator">></span>
-          <Link to="/products">PRODUCTS</Link>
+          <Link to="/products">{getTranslation(language, 'nav.products')}</Link>
           <span className="separator">></span>
-          <span className="current">HV BATTERIES</span>
+          <span className="current">{getTranslation(language, 'products.hvBatteriesPage.title')}</span>
         </div>
       </div>
 
@@ -57,12 +47,12 @@ const HVBatteries = () => {
       <div className="container">
         <div className="page-header">
           <div className="page-title-section">
-            <h1 className="page-title">HV Batteries</h1>
+            <h1 className="page-title">{getTranslation(language, 'products.hvBatteriesPage.title')}</h1>
             <p className="page-description">
-              The high voltage batteries for ZCS Azzurro three-phase hybrid inverters and storage systems are the best solution for optimising energy independence in residential applications.
+              {getTranslation(language, 'products.hvBatteriesPage.description1')}
             </p>
             <p className="page-description">
-              Capable of being installed in series up to a capacity of 60kWh, they are ideal for storage installations with ZCS Azzurro inverters. They configure themselves automatically, so there is no need for manual settings.
+              {getTranslation(language, 'products.hvBatteriesPage.description2')}
             </p>
             <p className="page-description">
               The Lithium Ion or Lithium-Iron-Phosphate technology allows efficient use even at high depths of discharge by optimising energy storage and reuse. Easy installation and long service life make these batteries highly efficient and practical.

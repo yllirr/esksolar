@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './OutdoorRetrofitStorage.css';
 
 const OutdoorRetrofitStorage = () => {
+  const { language } = useLanguage();
   const OUTDOOR_PRODUCTS = [
     {
       id: 1,
@@ -14,30 +18,16 @@ const OutdoorRetrofitStorage = () => {
 
   return (
     <div className="outdoor-retrofit-page">
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* Breadcrumbs */}
       <div className="breadcrumbs">
         <div className="container">
-          <Link to="/">HOME</Link>
+          <Link to="/">{getTranslation(language, 'nav.home')}</Link>
           <span className="separator">></span>
-          <Link to="/products">PRODUCTS</Link>
+          <Link to="/products">{getTranslation(language, 'nav.products')}</Link>
           <span className="separator">></span>
-          <span className="current">OUTDOOR RETROFIT STORAGE SYSTEM</span>
+          <span className="current">{getTranslation(language, 'products.outdoorRetrofitPage.title')}</span>
         </div>
       </div>
 
@@ -45,15 +35,12 @@ const OutdoorRetrofitStorage = () => {
       <div className="container">
         <div className="page-header">
           <div className="page-title-section">
-            <h1 className="page-title">Outdoor retrofit storage system</h1>
+            <h1 className="page-title">{getTranslation(language, 'products.outdoorRetrofitPage.title')}</h1>
             <p className="page-description">
-              The new outdoor retrofit storage system, is ideal for large power industrial installations. 
-              The system is modulated according to the customer's needs and is available with power from 1.25 to 750 kW 
-              and capacity from 250 kWh to 1.5 MWh.
+              {getTranslation(language, 'products.outdoorRetrofitPage.description1')}
             </p>
             <p className="page-description">
-              The system is equipped with a fire-fighting system with integrated sensors and monitoring as well as liquid-cooled. 
-              Installation is simple, thanks to the Plug & Play mode.
+              {getTranslation(language, 'products.outdoorRetrofitPage.description2')}
             </p>
           </div>
           <div className="page-image">

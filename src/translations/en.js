@@ -45,7 +45,82 @@ export const en = {
     installerSubtitle: 'Tools and resources for professionals',
     faq: 'ZCS Azzurro FAQ',
     training: 'Training Courses',
-    documentation: 'Documentation & Video Tutorials'
+    documentation: 'Documentation & Video Tutorials',
+    productList: {
+      singlePhase: {
+        title: 'Single-phase Inverter',
+        description: 'High-efficiency residential inverters for small to medium systems.'
+      },
+      threePhase: {
+        title: 'Three-phase Inverter',
+        description: 'Reliable power conversion for larger residential and commercial arrays.'
+      },
+      storageInverter: {
+        title: 'Storage Inverter',
+        description: 'Hybrid solutions enabling PV + battery integration and optimized self-consumption.'
+      },
+      retrofitStorage: {
+        title: 'Outdoor retrofit storage system',
+        description: 'Add batteries to existing PV systems without replacing the inverter.'
+      },
+      lvBatteries: {
+        title: 'LV Batteries',
+        description: 'Low-voltage lithium modules with scalable capacity and smart BMS.'
+      },
+      hvBatteries: {
+        title: 'HV Batteries',
+        description: 'High-voltage battery stacks designed for higher efficiency and faster charge.'
+      },
+      eMobility: {
+        title: 'Electric Mobility',
+        description: 'EV charging and accessories to power clean transportation.'
+      },
+      monitoring: {
+        title: 'Monitoring Systems',
+        description: 'Cloud-connected monitoring, apps and gateways for full visibility.'
+      }
+    },
+    // Individual product pages
+    singlePhasePage: {
+      title: 'Single-phase Inverter',
+      description1: 'The ZCS Azzurro single-phase inverters are the ideal solution for small photovoltaic systems in residential or commercial buildings. Available in sizes from 1 to 6 Kw, they are small, easy to manage and easy to install.',
+      description2: 'The wide range of input makes them easy to configure and suitable for any type of need, both for new installations and for retrofitting existing ones.',
+      description3: 'The graphic or alphanumeric display (depending on the model) allows you to consult the inverter data, while Wi-Fi connectivity allows remote monitoring anytime and anywhere.'
+    },
+    threePhasePage: {
+      title: 'Three-phase Inverter',
+      description1: 'The ZCS Azzurro three-phase inverters are the best solution for medium-size photovoltaic systems to be installed in commercial and industrial buildings.',
+      description2: 'The advanced technology developed by ZCS makes the Azzurro three-phase inverters efficient, versatile and highly functional.',
+      description3: 'Available in sizes from 3.3 to 136 Kw, they are easy to configure, safe and robust and able to adapt to every type of need, for both new installations and retrofitting of existing ones.'
+    },
+    lvBatteriesPage: {
+      title: 'LV Batteries',
+      description1: 'Low-voltage lithium modules with scalable capacity and smart BMS. Our LV battery systems provide reliable energy storage solutions for residential and commercial applications.',
+      description2: 'Featuring advanced battery management systems, these modules offer excellent performance, long cycle life, and easy installation for optimal energy independence.'
+    },
+    hvBatteriesPage: {
+      title: 'HV Batteries',
+      description1: 'The high voltage batteries for ZCS Azzurro three-phase hybrid inverters and storage systems are the best solution for optimising energy independence in residential applications.',
+      description2: 'Capable of being installed in series up to a capacity of 60kWh, they are ideal for storage installations with ZCS Azzurro inverters. They configure themselves automatically, so there is no need for manual settings.'
+    },
+    storageInvertersPage: {
+      title: 'Storage Inverter',
+      description1: 'ZCS Azzurro Storage Inverters are ideal for optimizing energy independence in residential and commercial buildings. Easy installation and automatic configuration make them perfect for both retrofit and hybrid applications.',
+      description2: 'Our storage inverters offer nominal power from 3 kW to 20 kW and storage capacity up to 25 kWh, with the ability to operate in stand-alone mode for power continuity during blackouts.'
+    },
+    outdoorRetrofitPage: {
+      title: 'Outdoor retrofit storage system',
+      description1: 'The new outdoor retrofit storage system, is ideal for large power industrial installations. The system is modulated according to the customer\'s needs and is available with power from 1.25 to 750 kW and capacity from 250 kWh to 1.5 MWh.',
+      description2: 'The system is equipped with a fire-fighting system with integrated sensors and monitoring as well as liquid-cooled. Installation is simple, thanks to the Plug & Play mode.'
+    },
+    electricMobilityPage: {
+      title: 'Electric Mobility',
+      description1: 'The Zucchetti Centro Sistemi (ZCS) chargers are available in two models with power capacities of 7kW and 22kW, single and three-phase, smart and connectable to any existing photovoltaic system, as well as the ZCS Azzurro production and storage inverters.'
+    },
+    monitoringSystemsPage: {
+      title: 'Monitoring Systems',
+      description1: 'The ZCS Azzurro monitoring systems are the ideal solution for the complete control and visibility of all the important parameters for plants of all types.'
+    }
   },
 
   // About Us
