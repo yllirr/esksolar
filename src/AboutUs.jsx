@@ -1,8 +1,12 @@
 import React from 'react';
 import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './AboutUs.css';
 
 const AboutUs = () => {
+  const { language } = useLanguage();
+  
   return (
     <>
       <Header />
@@ -10,9 +14,12 @@ const AboutUs = () => {
       <section className="about-us">
         <div className="container">
           <div className="about-hero">
-            <h1 className="about-title">About SunPulse</h1>
+            <h1 className="about-title">{getTranslation(language, 'about.title')}</h1>
             <p className="about-subtitle">
-              Leading the solar energy revolution with innovative solutions and unwavering commitment to sustainability.
+              {language === 'sq' 
+                ? 'Drejtojmë revolucionin e energjisë diellore me zgjidhje inovative dhe angazhim të pakundërshtueshëm për qëndrueshmërinë.'
+                : 'Leading the solar energy revolution with innovative solutions and unwavering commitment to sustainability.'
+              }
             </p>
           </div>
 

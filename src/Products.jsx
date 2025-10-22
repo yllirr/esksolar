@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './Products.css';
 
 const PRODUCTS = [
@@ -15,6 +17,8 @@ const PRODUCTS = [
 ];
 
 const Products = () => {
+  const { language } = useLanguage();
+  
   return (
     <>
       <Header />
@@ -22,13 +26,13 @@ const Products = () => {
       <section id="products" className="products">
       <div className="products-container">
         <header className="products-header">
-          <h2 className="products-title">Products</h2>
-          <p className="products-subtitle">Discover our full range of solar and storage solutions</p>
+          <h2 className="products-title">{getTranslation(language, 'products.title')}</h2>
+          <p className="products-subtitle">{getTranslation(language, 'products.subtitle')}</p>
           
           {/* Category Tabs */}
           <div className="category-tabs">
-            <Link to="/products/home" className="category-tab">Home Products</Link>
-            <Link to="/products/business" className="category-tab">Business Products</Link>
+            <Link to="/products/home" className="category-tab">{getTranslation(language, 'products.homeProducts')}</Link>
+            <Link to="/products/business" className="category-tab">{getTranslation(language, 'products.businessProducts')}</Link>
           </div>
         </header>
 
@@ -104,7 +108,7 @@ const Products = () => {
                   } 
                   className="product-cta"
                 >
-                  Learn more <span className="arrow">→</span>
+                  {getTranslation(language, 'products.learnMore')} <span className="arrow">→</span>
                 </Link>
               </div>
             </article>
@@ -121,11 +125,13 @@ const Products = () => {
       <div className="container">
         <div className="installer-content">
           <div className="installer-header">
-            <span className="installer-badge">For Professionals</span>
-            <h2 className="installer-question">Are you an installer?</h2>
+            <span className="installer-badge">{getTranslation(language, 'products.installerTitle')}</span>
+            <h2 className="installer-question">{getTranslation(language, 'products.installerSubtitle')}</h2>
             <p className="installer-description">
-              Join thousands of certified professionals who trust our solutions. 
-              Access exclusive resources, training, and support to grow your business.
+              {language === 'sq' 
+                ? 'Bashkohuni me mijëra profesionistë të certifikuar që besojnë zgjidhjet tona. Aksesoni burime ekskluzive, trajnime dhe mbështetje për të rritur biznesin tuaj.'
+                : 'Join thousands of certified professionals who trust our solutions. Access exclusive resources, training, and support to grow your business.'
+              }
             </p>
           </div>
           
@@ -140,9 +146,14 @@ const Products = () => {
                 </div>
               </div>
               <div className="card-content">
-                <h3 className="installer-title">ZCS Azzurro</h3>
-                <h4 className="installer-subtitle">FAQ & Support</h4>
-                <p className="card-description">Get instant answers to technical questions and access our comprehensive knowledge base.</p>
+                <h3 className="installer-title">{getTranslation(language, 'products.faq')}</h3>
+                <h4 className="installer-subtitle">{getTranslation(language, 'faq.title')}</h4>
+                <p className="card-description">
+                  {language === 'sq' 
+                    ? 'Merrni përgjigje të menjëhershme për pyetjet teknike dhe aksesoni bazën tonë të njohurive gjithëpërfshirëse.'
+                    : 'Get instant answers to technical questions and access our comprehensive knowledge base.'
+                  }
+                </p>
                 <button className="installer-btn installer-btn-primary">
                   <span>Explore Resources</span>
                   <svg className="btn-arrow" viewBox="0 0 24 24" fill="none">
@@ -161,20 +172,25 @@ const Products = () => {
                 </div>
               </div>
               <div className="card-content">
-                <h3 className="installer-title">Training Courses</h3>
-                <p className="card-description">Master the latest solar technologies with our comprehensive certification programs.</p>
+                <h3 className="installer-title">{getTranslation(language, 'products.training')}</h3>
+                <p className="card-description">
+                  {language === 'sq' 
+                    ? 'Zotëroni teknologjitë më të fundit diellore me programet tona gjithëpërfshirëse të certifikimit.'
+                    : 'Master the latest solar technologies with our comprehensive certification programs.'
+                  }
+                </p>
                 <div className="course-stats">
                   <div className="stat">
                     <span className="stat-number">50+</span>
-                    <span className="stat-label">Courses</span>
+                    <span className="stat-label">{language === 'sq' ? 'Kurse' : 'Courses'}</span>
                   </div>
                   <div className="stat">
                     <span className="stat-number">2K+</span>
-                    <span className="stat-label">Graduates</span>
+                    <span className="stat-label">{language === 'sq' ? 'Diplomuarë' : 'Graduates'}</span>
                   </div>
                 </div>
                 <button className="installer-btn installer-btn-secondary">
-                  <span>Start Learning</span>
+                  <span>{language === 'sq' ? 'Fillo Mësimin' : 'Start Learning'}</span>
                   <svg className="btn-arrow" viewBox="0 0 24 24" fill="none">
                     <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -196,15 +212,19 @@ const Products = () => {
                 </div>
               </div>
               <div className="card-content">
-                <h3 className="installer-title">Documentation</h3>
-                <h4 className="installer-subtitle">& Video Tutorials</h4>
-                <p className="card-description">Step-by-step guides, technical specifications, and video walkthroughs for every product.</p>
+                <h3 className="installer-title">{getTranslation(language, 'products.documentation')}</h3>
+                <p className="card-description">
+                  {language === 'sq' 
+                    ? 'Udhëzime hap pas hapi, specifikime teknike dhe video walkthrough për çdo produkt.'
+                    : 'Step-by-step guides, technical specifications, and video walkthroughs for every product.'
+                  }
+                </p>
                 <div className="resource-count">
-                  <span className="count-item">📋 200+ Guides</span>
-                  <span className="count-item">🎥 150+ Videos</span>
+                  <span className="count-item">📋 {language === 'sq' ? '200+ Udhëzime' : '200+ Guides'}</span>
+                  <span className="count-item">🎥 {language === 'sq' ? '150+ Video' : '150+ Videos'}</span>
                 </div>
                 <button className="installer-btn installer-btn-tertiary">
-                  <span>Browse Library</span>
+                  <span>{language === 'sq' ? 'Shfletoni Bibliotekën' : 'Browse Library'}</span>
                   <svg className="btn-arrow" viewBox="0 0 24 24" fill="none">
                     <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>

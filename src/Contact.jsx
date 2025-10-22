@@ -1,76 +1,71 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Header from './Header';
+import { useLanguage } from './LanguageContext';
+import { getTranslation } from './translations';
 import './Contact.css';
 
 const Contact = () => {
+  const { language } = useLanguage();
+  
   return (
     <>
-      {/* Header Navigation */}
-      <header className="header">
-        <div className="container">
-          <div className="nav-wrapper">
-            <Link to="/" className="logo">SunPulse</Link>
-            <nav className="nav-menu">
-              <Link to="/">Home</Link>
-              <Link to="/products">Products</Link>
-              <Link to="/blog">Blog</Link>
-              <Link to="/contact">Contact</Link>
-            </nav>
-            <button className="btn-quote-header">Get a Quote</button>
-          </div>
-        </div>
-      </header>
+      <Header />
 
       <section className="contact-page">
         <div className="container">
           <div className="contact-header">
-            <h1 className="contact-title">Contact Us</h1>
-            <p className="contact-subtitle">Get in touch with our solar energy experts</p>
+            <h1 className="contact-title">{getTranslation(language, 'contact.title')}</h1>
+            <p className="contact-subtitle">{getTranslation(language, 'contact.subtitle')}</p>
           </div>
 
           <div className="contact-content">
             <div className="contact-info">
-              <h2>Get in Touch</h2>
-              <p>Ready to make the switch to solar energy? Contact our team of experts for a personalized consultation.</p>
+              <h2>{language === 'sq' ? 'Na Kontaktoni' : 'Get in Touch'}</h2>
+              <p>
+                {language === 'sq' 
+                  ? 'Gati të bëni kalimin në energji diellore? Kontaktoni ekipin tonë të ekspertëve për një konsultim të personalizuar.'
+                  : 'Ready to make the switch to solar energy? Contact our team of experts for a personalized consultation.'
+                }
+              </p>
               
               <div className="contact-details">
                 <div className="contact-item">
-                  <h3>Phone</h3>
+                  <h3>{getTranslation(language, 'contact.phone')}</h3>
                   <p>+1 (555) 123-4567</p>
                 </div>
                 
                 <div className="contact-item">
-                  <h3>Email</h3>
+                  <h3>{getTranslation(language, 'contact.email')}</h3>
                   <p>info@sunpulse.com</p>
                 </div>
                 
                 <div className="contact-item">
-                  <h3>Address</h3>
+                  <h3>{getTranslation(language, 'contact.address')}</h3>
                   <p>123 Solar Street<br />Green City, GC 12345</p>
                 </div>
               </div>
             </div>
 
             <div className="contact-form">
-              <h2>Send us a Message</h2>
+              <h2>{language === 'sq' ? 'Dërgoni një Mesazh' : 'Send us a Message'}</h2>
               <form>
                 <div className="form-group">
-                  <input type="text" placeholder="Your Name" className="form-input" />
+                  <input type="text" placeholder={getTranslation(language, 'contact.name')} className="form-input" />
                 </div>
                 
                 <div className="form-group">
-                  <input type="email" placeholder="Your Email" className="form-input" />
+                  <input type="email" placeholder={getTranslation(language, 'contact.email')} className="form-input" />
                 </div>
                 
                 <div className="form-group">
-                  <input type="text" placeholder="Subject" className="form-input" />
+                  <input type="text" placeholder={getTranslation(language, 'contact.subject')} className="form-input" />
                 </div>
                 
                 <div className="form-group">
-                  <textarea placeholder="Your Message" className="form-textarea" rows="5"></textarea>
+                  <textarea placeholder={getTranslation(language, 'contact.message')} className="form-textarea" rows="5"></textarea>
                 </div>
                 
-                <button type="submit" className="form-submit">Send Message</button>
+                <button type="submit" className="form-submit">{getTranslation(language, 'contact.submit')}</button>
               </form>
             </div>
           </div>

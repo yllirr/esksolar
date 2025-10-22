@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import Header from './Header';
 import { useLanguage } from './LanguageContext';
 import { getTranslation } from './translations';
