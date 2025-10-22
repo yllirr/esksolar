@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Header from './Header';
 import { useLanguage } from './LanguageContext';
 import { getTranslation } from './translations';
@@ -6,26 +7,30 @@ import './HeroSection.css';
 
 const HeroSection = () => {
   const [isNightMode, setIsNightMode] = useState(false);
+  const [isShineActive, setIsShineActive] = useState(false);
+  const [mousePercent, setMousePercent] = useState({ x: 50, y: 50 });
   const brightRef = useRef(null);
   const { language } = useLanguage();
 
-  useEffect(() => {
-    let lastScrollY = window.scrollY;
-    const triggerPoint = 300;
+  const shineStyle = {
+    '--mx': `${mousePercent.x}%`,
+    '--my': `${mousePercent.y}%`,
+  };
 
-    const onScroll = () => {
-      const currentScrollY = window.scrollY;
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const triggerPoint = 300; // Kur të scroll-ojmë 300px, ndryshon në natë
       
-      // Only update if we cross the threshold
-      if ((lastScrollY <= triggerPoint && currentScrollY > triggerPoint) ||
-          (lastScrollY > triggerPoint && currentScrollY <= triggerPoint)) {
-        setIsNightMode(currentScrollY > triggerPoint);
-        lastScrollY = currentScrollY;
+      if (scrollPosition > triggerPoint) {
+        setIsNightMode(true);
+      } else {
+        setIsNightMode(false);
       }
     };
 
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -49,7 +54,18 @@ const HeroSection = () => {
             <div className="hero-right">
               <h2
                 ref={brightRef}
-                className="bright-future"
+                className={`bright-future ${isShineActive ? 'shine-active' : ''}`}
+                style={shineStyle}
+                onMouseEnter={() => setIsShineActive(true)}
+                onMouseLeave={() => setIsShineActive(false)}
+                onMouseMove={(e) => {
+                  const target = brightRef.current;
+                  if (!target) return;
+                  const rect = target.getBoundingClientRect();
+                  const x = ((e.clientX - rect.left) / rect.width) * 100;
+                  const y = ((e.clientY - rect.top) / rect.height) * 100;
+                  setMousePercent({ x: Math.max(0, Math.min(100, x)), y: Math.max(0, Math.min(100, y)) });
+                }}
               >
                 {getTranslation(language, 'hero.brightFuture')}
               </h2>
