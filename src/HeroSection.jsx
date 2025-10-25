@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import { useLanguage } from './LanguageContext';
 import { getTranslation } from './translations';
@@ -10,6 +11,7 @@ const HeroSection = () => {
   const [mousePercent, setMousePercent] = useState({ x: 50, y: 50 });
   const brightRef = useRef(null);
   const { language } = useLanguage();
+  const navigate = useNavigate();
 
   const shineStyle = {
     '--mx': `${mousePercent.x}%`,
@@ -45,8 +47,8 @@ const HeroSection = () => {
               <h1 className="hero-heading">
                 {getTranslation(language, 'hero.title')}
               </h1>
-              <button className="btn-get-quote">
-                {getTranslation(language, 'nav.getQuote')}
+              <button className="btn-get-quote" onClick={() => navigate('/blog/7')}>
+                {getTranslation(language, 'nav.aboutUs')}
                 <span className="arrow">→</span>
               </button>
             </div>

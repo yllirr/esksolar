@@ -6,7 +6,8 @@ export const en = {
     products: 'Products',
     blog: 'Blog',
     contact: 'Contact',
-    getQuote: 'Get a Quote'
+    getQuote: 'Get a Quote',
+    aboutUs: 'About Us'
   },
 
   // Hero Section
@@ -268,6 +269,55 @@ export const en = {
           <h3>Annual Inspection</h3>
           <p>A professional annual inspection can identify small issues before they become expensive to repair.</p>
         `
+      },
+      {
+        id: 7,
+        title: "ESK Solar: About the Company",
+        excerpt: "ESK Solar is a leading company in the field of renewable energy. Founded in 2012, our company has always strived to provide professionalism and the highest quality products.",
+        author: "ESK Solar Team",
+        date: "October 25, 2024",
+        readTime: "6 min read",
+        category: "About Us",
+        image: "hero.jpg",
+        tags: ["Company", "History", "Mission", "Values"],
+        content: `
+          <h2>Greetings from ESK Solar</h2>
+          <p>ESK Solar is a leading company in the field of renewable energy. Founded in 2012, our company has always strived to provide professionalism and the highest quality products.</p>
+          
+          <h3>Our History</h3>
+          <p>In 2012, ESK Solar was founded with a vision to bring clean energy to Kosovo and the wider region. From our early days, we have been committed to providing sustainable energy solutions that help our customers save money and protect the environment.</p>
+          
+          <p>Over the years, we have grown our company from a small team into a large organization with experts specialized in the installation, maintenance, and consultation of solar energy systems.</p>
+          
+          <h3>What Makes Us Special</h3>
+          <p>At ESK Solar, we believe in high quality and exceptional customer service. This is why:</p>
+          
+          <ul>
+            <li><strong>Superior Quality:</strong> We work only with the best manufacturers of solar panels and components in the international market</li>
+            <li><strong>Technical Expertise:</strong> Our team consists of certified engineers and technicians with years of experience</li>
+            <li><strong>Sustainability:</strong> We are committed to helping create a cleaner and more sustainable future</li>
+            <li><strong>Full Support:</strong> We offer long warranties and after-sales service for all our products</li>
+          </ul>
+          
+          <h3>Our Mission</h3>
+          <p>Our mission is to become the leading partner for renewable energy solutions in Kosovo and the region. We want to help families and businesses transition to clean energy, reduce dependence on traditional energy sources, and contribute to protecting our planet.</p>
+          
+          <h3>Our Products and Services</h3>
+          <p>We offer a complete range of products and services to meet every need:</p>
+          
+          <ul>
+            <li>Solar systems for residential homes</li>
+            <li>Solar installations for businesses and institutions</li>
+            <li>Integrated battery systems for energy storage</li>
+            <li>Professional service and maintenance</li>
+            <li>Consultations and feasibility studies</li>
+          </ul>
+          
+          <h3>Contact Us</h3>
+          <p>If you have questions about our products or services, or simply want to learn more about transitioning to solar energy, we are here to help. Contact us today for a free consultation!</p>
+          
+          <p><strong>ESK Solar</strong> - The Energy of the Future, Today!</p>
+        `
       }
     ]
   },
@@ -342,14 +392,17 @@ export const en = {
 
   // Footer
   footer: {
-    description: 'Leading company for advanced solar energy and energy storage solutions.',
-    quickLinks: 'Quick Links',
-    services: 'Services',
+    sunpulse: 'SunPulse',
+    company: 'Company',
     contact: 'Contact',
-    address: 'Address',
-    phone: 'Phone',
-    email: 'Email',
-    copyright: 'All rights reserved.'
+    connect: 'Connect',
+    products: 'Products',
+    aboutUs: 'About Us',
+    blog: 'Blog',
+    contactUs: 'Contact Us',
+    suhareke: 'Suharekë, Kosovë',
+    followFacebook: 'Follow us on Facebook',
+    eskSolar: 'ESK Solar 2025 | Created by Blurb Agency'
   },
 
   // Testimonials

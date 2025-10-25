@@ -6,7 +6,8 @@ export const sq = {
     products: 'Produktet',
     blog: 'Blog',
     contact: 'Kontakti',
-    getQuote: 'Merr Ofertë'
+    getQuote: 'Merr Ofertë',
+    aboutUs: 'Rreth Nesh'
   },
 
   // Hero Section
@@ -270,6 +271,55 @@ export const sq = {
           <h3>Inspektimi Vjetor</h3>
           <p>Një inspektim profesional vjetor mund të identifikojë probleme të vogla para se ato të bëhen të kushtueshme për t'u rregulluar.</p>
         `
+      },
+      {
+        id: 7,
+        title: "ESK Solar: Rreth Kompanisë",
+        excerpt: "ESK Solar është kompani lidere në fushën e energjisë së ripërtrishme. E themeluar që nga viti 2012, ku gjatë kësaj periudhe kompania jonë ka qenë gjithmonë në përpjekje për të ofruar profesionalizëm dhe produktet më cilësore.",
+        author: "ESK Solar Team",
+        date: "25 Tetor 2024",
+        readTime: "6 min lexim",
+        category: "Rreth Nesh",
+        image: "hero.jpg",
+        tags: ["Kompania", "Historia", "Misjoni", "Vlera"],
+        content: `
+          <h2>Përshëndetje nga ESK Solar</h2>
+          <p>ESK Solar është kompani lidere në fushën e energjisë së ripërtrishme. E themeluar që nga viti 2012, ku gjatë kësaj periudhe kompania jonë ka qenë gjithmonë në përpjekje për të ofruar profesionalizëm dhe produktet më cilësore.</p>
+          
+          <h3>Historia Jonë</h3>
+          <p>Në vitin 2012, ESK Solar u themelua me vizion për të sjellë energjinë e pastër në Kosovë dhe rajonin më të gjerë. Që nga ditët tona të para, kemi qenë të përkushtuar për të ofruar zgjidhje të qëndrueshme energjetike që ndihmojnë klientët tanë të kursjnë para dhe të mbrojnë mjedisin.</p>
+          
+          <p>Gjatë viteve, kemi rritur kompaninë tonë nga një ekip i vogël në një organizatë të madhe me ekspertë të specializuar në instalimin, mirëmbajtjen dhe këshillimin për sistemet e energjisë diellore.</p>
+          
+          <h3>Çfarë Na Bën Të Veçantë</h3>
+          <p>Në ESK Solar, ne besojmë në cilësinë e lartë dhe shërbimin e jashtëzakonshëm të klientit. Kjo është arsyeja pse:</p>
+          
+          <ul>
+            <li><strong>Cilësi Superior:</strong> Punojmë vetëm me prodhuesit më të mirë të paneleve dhe komponentëve diellorë në tregun ndërkombëtar</li>
+            <li><strong>Ekspertizë Teknike:</strong> Ekipi ynë përbëhet nga inxhinierë dhe teknikë certifikuar me vite eksperience</li>
+            <li><strong>Qëndrueshmëri:</strong> Ne jemi të përkushtuar për të ndihmuar në kriimin e një të ardhmeje më të pastër dhe më të qëndrueshme</li>
+            <li><strong>Mbështetje e Plotë:</strong> Oferojmë garancitë e gjata dhe shërbim pas shitjes për të gjithë produktet tona</li>
+          </ul>
+          
+          <h3>Dëshira Jonë</h3>
+          <p>Dëshira jonë është të bëhemi partneri kryesor për zgjidhjet e energjisë së ripërtrishme në Kosovë dhe rajonin. Ne duam të ndihmojmë familjet dhe bizneset të kalojnë në energji të pastër, të reduktojnë varësinë nga burimet e energjisë tradicionale dhe të kontribuojnë në mbrojtjen e planetit tonë.</p>
+          
+          <h3>Produktet dhe Shërbimet Tona</h3>
+          <p>Oferojmë një gamë të plotë produktesh dhe shërbimesh për të kënaqur çdo nevojë:</p>
+          
+          <ul>
+            <li>Sisteme diellore për shtëpi rezidenciale</li>
+            <li>Instalime diellore për biznese dhe institucione</li>
+            <li>Sisteme të integruara baterie për ruajtje energjie</li>
+            <li>Shërbim dhe mirëmbajtje profesionale</li>
+            <li>Konsulta dhe studime të mundshmërisë</li>
+          </ul>
+          
+          <h3>Kontaktoni Ne</h3>
+          <p>Nëse keni pyetje për produktet apo shërbimet tona, apo thjesht doni të mësoni më shumë për kohën që hapja në energjinë diellore, jemi këtu për të ndihmuar. Kontaktoni ne sot për një konsultim falas!</p>
+          
+          <p><strong>ESK Solar</strong> - Energjia e Së Ardhmes, Sot!</p>
+        `
       }
     ]
   },
@@ -344,14 +394,17 @@ export const sq = {
 
   // Footer
   footer: {
-    description: 'Kompania kryesore për zgjidhje të avancuara të energjisë diellore dhe ruajtjes së energjisë.',
-    quickLinks: 'Lidhje të Shpejta',
-    services: 'Shërbimet',
+    sunpulse: 'SunPulse',
+    company: 'Kompania',
     contact: 'Kontakti',
-    address: 'Adresa',
-    phone: 'Telefoni',
-    email: 'Email',
-    copyright: 'Të gjitha të drejtat e rezervuara.'
+    connect: 'Lidhu',
+    products: 'Produktet',
+    aboutUs: 'Rreth Nesh',
+    blog: 'Blog',
+    contactUs: 'Na Kontaktoni',
+    suhareke: 'Suharekë, Kosovë',
+    followFacebook: 'Na Ndiqni në Facebook',
+    eskSolar: 'ESK Solar 2025 | Krijuar nga Blurb Agency'
   },
 
   // Testimonials
