@@ -10,6 +10,7 @@ const HeroSection = () => {
   const [isShineActive, setIsShineActive] = useState(false);
   const [mousePercent, setMousePercent] = useState({ x: 50, y: 50 });
   const brightRef = useRef(null);
+  const heroRef = useRef(null);
   const { language } = useLanguage();
   const navigate = useNavigate();
 
@@ -20,10 +21,21 @@ const HeroSection = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const triggerPoint = 300; // Kur të scroll-ojmë 300px, ndryshon në natë
+      if (!heroRef.current) return;
       
-      if (scrollPosition > triggerPoint) {
+      const scrollPosition = window.scrollY;
+      const heroRect = heroRef.current.getBoundingClientRect();
+      const heroTop = window.scrollY + heroRect.top;
+      const heroHeight = heroRect.height;
+      const heroBottom = heroTop + heroHeight;
+      
+      // Night mode duhet të shfaqet më herët dhe pushojë kur dalim jashtë seksionit
+      // Trigger point është 30% e lartësisë së seksionit (për më shumë scroll)
+      const triggerOffset = heroHeight * 0.3;
+      const triggerPoint = heroTop + triggerOffset;
+      
+      // Shfaqe night mode vetëm kur jemi brenda kufijve të seksionit hero
+      if (scrollPosition >= triggerPoint && scrollPosition < heroBottom) {
         setIsNightMode(true);
       } else {
         setIsNightMode(false);
@@ -31,6 +43,7 @@ const HeroSection = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Call once on mount to set initial state
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -39,7 +52,7 @@ const HeroSection = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <section ref={heroRef} className="hero-section">
         <div className="container">
           <div className="hero-top">
             <div className="hero-left">
