@@ -192,11 +192,13 @@
 }
 
 .image-section.day-mode {
-  background-image: url('../foto/hero.jpg');
+  background-image: url('./assets/hero/day.png');
+  background-attachment: fixed;
 }
 
 .image-section.night-mode {
-  background-image: url('../foto/nightt.png');
+  background-image: url('./assets/hero/night.png');
+  background-attachment: fixed;
 }
 
 .image-content-wrapper {
