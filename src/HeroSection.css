@@ -195,12 +195,15 @@
   background-image: url('./assets/hero/day.png');
   background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
 }
 
 .image-section.night-mode {
   background-image: url('./assets/hero/night.png');
   background-attachment: fixed;
   background-size: cover;
+  background-position: center center;
+  filter: brightness(1.1) contrast(1.05);
 }
 
 @media (max-width: 768px) {
@@ -212,6 +215,7 @@
   .image-section.night-mode {
     background-image: url('./assets/hero/night-mobile.png');
     background-attachment: scroll;
+    filter: brightness(1.1) contrast(1.05);
   }
 }
 
@@ -430,6 +434,7 @@
     background-size: cover !important;
     background-position: center center !important;
     min-height: 400px !important;
+    filter: brightness(1.1) contrast(1.05) !important;
   }
 
   .image-left {
