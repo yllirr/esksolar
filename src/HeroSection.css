@@ -194,11 +194,20 @@
 .image-section.day-mode {
   background-image: url('./assets/hero/day.png');
   background-attachment: fixed;
+  background-size: cover;
 }
 
 .image-section.night-mode {
   background-image: url('./assets/hero/night.png');
   background-attachment: fixed;
+  background-size: cover;
+}
+
+@media (max-width: 768px) {
+  .image-section.day-mode,
+  .image-section.night-mode {
+    background-attachment: scroll;
+  }
 }
 
 .image-content-wrapper {
@@ -361,6 +370,11 @@
     min-height: 500px;
   }
 
+  .image-section {
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
   .image-overlay {
     left: 1.5rem;
     right: 1.5rem;
@@ -399,6 +413,16 @@
     font-size: 2.5rem;
   }
 
+  .image-section {
+    background-size: cover !important;
+    background-position: center center !important;
+    min-height: 400px !important;
+  }
+
+  .image-left {
+    min-height: 400px !important;
+  }
+
   .hero-heading {
     font-size: 1.25rem;
   }
@@ -406,10 +430,6 @@
   .btn-get-quote {
     width: 100%;
     justify-content: center;
-  }
-
-  .image-left {
-    min-height: 400px;
   }
 
   .image-overlay {
