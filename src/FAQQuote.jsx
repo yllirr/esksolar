@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { useLanguage } from './LanguageContext';
 import { getTranslation } from './translations';
@@ -15,6 +16,7 @@ const FAQQuote = () => {
   });
   const [status, setStatus] = useState('');
   const { language } = useLanguage();
+  const navigate = useNavigate();
 
   const faqData = getTranslation(language, 'faq.questions');
 
@@ -70,7 +72,7 @@ const FAQQuote = () => {
             <h2 className="faq-title">{getTranslation(language, 'faq.title')}</h2>
             <div className="faq-cta">
               <p className="faq-cta-text">{getTranslation(language, 'faq.subtitle')}</p>
-              <button className="faq-cta-btn">
+              <button className="faq-cta-btn" onClick={() => navigate('/blog')}>
                 {getTranslation(language, 'common.readMore')}
                 <span className="btn-arrow">→</span>
               </button>

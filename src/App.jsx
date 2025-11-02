@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './LanguageContext';
 import HeroSection from './HeroSection';
 import SolarOptions from './SolarOptions';
@@ -25,10 +25,22 @@ import HomeProducts from './HomeProducts';
 import BusinessProducts from './BusinessProducts';
 import './App.css';
 
+// Scroll to top component
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <LanguageProvider>
       <Router>
+        <ScrollToTop />
         <div className="App">
         <Routes>
           <Route path="/" element={
