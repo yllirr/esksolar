@@ -295,6 +295,19 @@
   margin-bottom: 1.5rem;
 }
 
+.feature-icon.logo-icon {
+  font-size: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-icon.logo-icon img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
 .feature-text {
   color: #000;
   font-size: 1rem;

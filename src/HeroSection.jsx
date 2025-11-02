@@ -110,7 +110,9 @@ const HeroSection = () => {
                   <p className="feature-text" dangerouslySetInnerHTML={{ __html: getTranslation(language, 'hero.feature2') }} />
                 </div>
                 <div className="feature-card">
-                  <div className="feature-icon headset-icon">🎧</div>
+                  <div className="feature-icon logo-icon">
+                    <img src={`${process.env.PUBLIC_URL}/foto/logo.jpeg`} alt="ESK Solar" />
+                  </div>
                   <p className="feature-text" dangerouslySetInnerHTML={{ __html: getTranslation(language, 'hero.feature3') }} />
                 </div>
               </div>

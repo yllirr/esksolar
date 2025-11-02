@@ -13,16 +13,16 @@ export const sq = {
   // Hero Section
   hero: {
     joined: 'U BASHKUAN',
-    title: 'Hapja në të Ardhmen si Kurrë më Parë. Përjetoni Energjinë Diellore të Avancuar.',
+    title: 'Zgjidhje inteligjente për shtëpinë, biznesin apo industrinë – të dizajnuara për kursim, pavarësi dhe një planet më të gjelbër.',
     brightFuture: 'E ARDHMJA E NDRIÇUAR',
     solarHome: 'Diell për Shtëpinë Tuaj',
     solarBusiness: 'Diell për Biznesin Tuaj',
     residence: 'Rezidenca',
     commercial: 'Komerciale',
-    topPick: 'Zgjedhja Kryesore e Amerikës për Diellin Shtëpiak dhe Ruajtjen e Energjisë',
+    topPick: 'Zgjidhja Nr.1 për Energjinë Diellore dhe Ruajtjen e Energjisë në Shtëpi',
     feature1: 'Performancë e Jashtëzakonshme Diellore<br />dhe Baterie',
     feature2: 'Zgjidhje të Personalizuara<br />Pagese për Shtëpinë Tuaj',
-    feature3: 'Garantia SunPulse'
+    feature3: 'ESK Solar<br />Mbështetje teknike 24/7 dhe garanci shumëvjeçare për pajisjet dhe performancën.'
   },
 
   // Products
@@ -409,9 +409,11 @@ export const sq = {
 
   // Testimonials
   testimonials: {
-    text: 'Është i përshtatshëm, nuk duhet të<br />shqetësohemi për të. SunPulse<br />e monitoron për ne. Nëse ndodh<br />diçka, ata do të vijnë dhe<br />do ta rregullojnë, kështu që na pëlqen ajo pjesë.',
-    author: 'Haley - Litchfield Park, AZ',
-    stats: '00,000 shtëpi dhe duke numëruar'
+    title: 'Klientët Tanë, Frymëzimi Ynë',
+    subtitle: 'Mijëra familje dhe biznese kanë zgjedhur ESK Solar për energji të pastër, kursim afatgjatë dhe siguri pa shqetësime.<br />Ne kujdesemi për çdo hap — nga instalimi deri te mirëmbajtja.',
+    text: 'Zgjidhja perfekte për familjen tonë!<br />Sistemi funksionon në mënyrë të shkëlqyer dhe ESK Solar monitoron gjithçka për ne.<br />Nëse ndodh ndonjë problem, ata janë gjithmonë gati ta zgjidhin menjëherë.<br />Kjo na jep paqe mendore — thjesht funksionon.',
+    author: 'Arlinda, Prishtinë',
+    stats: 'Mbi 5,000 shtëpi tashmë ndriçohen me ESK Solar – dhe numri rritet çdo ditë.'
   },
 
   // Plan & Pricing
@@ -421,7 +423,7 @@ export const sq = {
     description: 'Nga instalimi deri te mirëmbajtja, shijoni një përvojë diellore të lehtë dhe të përballueshme me planin e qirasë diellore SunPulse.',
     features: {
       feature1: 'Panele diellore dhe ruajtje baterie të klasit më të mirë',
-      feature2: 'Garantia 25-vjeçare e pajisjeve',
+      feature2: 'Garancion 25-vjeçar për panelet diellore dhe inverterët',
       feature3: 'Pagesa mujore të parashikueshme me norma të fiksuara'
     },
     ctaButton: 'Merr Ofertë'

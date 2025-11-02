@@ -13,16 +13,16 @@ export const en = {
   // Hero Section
   hero: {
     joined: 'JOINED',
-    title: 'Step into Tomorrow Like Never Before. Experience Advanced Solar Power.',
+    title: 'Smart solutions for homes, businesses, or industries – designed for savings, independence, and a greener planet.',
     brightFuture: 'BRIGHT FUTURE',
     solarHome: 'Solar for Your Home',
     solarBusiness: 'Solar for Your Business',
     residence: 'Residence',
     commercial: 'Commercial',
-    topPick: 'America\'s Top Pick for Home Solar and Energy Storage',
+    topPick: 'The No.1 Solution for Solar Energy and Home Energy Storage',
     feature1: 'Exceptional Solar<br />and Battery<br />Performance',
     feature2: 'Customized<br />Payment Solutions<br />for Your Home',
-    feature3: 'The SunPulse<br />Assurance'
+    feature3: 'ESK Solar<br />24/7 technical support and multi-year warranty for equipment and performance.'
   },
 
   // Products
@@ -407,9 +407,11 @@ export const en = {
 
   // Testimonials
   testimonials: {
-    text: 'It\'s convenient, we don\'t have to<br />worry about it. SunPulse<br />monitors it for us. If anything<br />happens they will come out and<br />fix it so we like that part.',
-    author: 'Haley - Litchfield Park, AZ',
-    stats: '00,000 homes and counting'
+    title: 'Our Customers, Our Inspiration',
+    subtitle: 'Thousands of families and businesses have chosen ESK Solar for clean energy, long-term savings, and worry-free security.<br />We take care of every step — from installation to maintenance.',
+    text: 'The perfect solution for our family!<br />The system works brilliantly and ESK Solar monitors everything for us.<br />If any issue arises, they are always ready to fix it immediately.<br />This gives us peace of mind — it simply works.',
+    author: 'Arlinda, Pristina',
+    stats: 'Over 5,000 homes already powered by ESK Solar – and the number grows every day.'
   },
 
   // Plan & Pricing

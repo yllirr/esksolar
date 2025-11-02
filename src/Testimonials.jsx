@@ -14,6 +14,9 @@ const Testimonials = () => {
         </div>
         
         <div className="testimonial-content">
+          <h2 className="testimonials-title">{getTranslation(language, 'testimonials.title')}</h2>
+          <p className="testimonials-subtitle" dangerouslySetInnerHTML={{ __html: getTranslation(language, 'testimonials.subtitle') }} />
+          
           <div className="testimonial-quote">
             <div className="quote-marks">"</div>
             <div className="stars">★★★★★</div>

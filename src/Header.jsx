@@ -12,7 +12,9 @@ const Header = () => {
     <header className="header">
       <div className="container">
         <div className="nav-wrapper">
-          <Link to="/" className="logo">SunPulse</Link>
+          <Link to="/" className="logo">
+            <img src={`${process.env.PUBLIC_URL}/foto/logo.jpeg`} alt="ESK Solar" className="logo-img" />
+          </Link>
           
           {/* Desktop Navigation */}
           <nav className="nav-menu desktop-nav">
