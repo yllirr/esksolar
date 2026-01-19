@@ -12,17 +12,120 @@ export const sq = {
 
   // Hero Section
   hero: {
-    joined: 'U BASHKUAN',
-    title: 'Zgjidhje inteligjente për shtëpinë, biznesin apo industrinë – të dizajnuara për kursim, pavarësi dhe një planet më të gjelbër.',
-    brightFuture: 'E ARDHMJA E NDRIÇUAR',
-    solarHome: 'Diell për Shtëpinë Tuaj',
-    solarBusiness: 'Diell për Biznesin Tuaj',
-    residence: 'Rezidenca',
-    commercial: 'Komerciale',
-    topPick: 'Zgjidhja Nr.1 për Energjinë Diellore dhe Ruajtjen e Energjisë në Shtëpi',
-    feature1: 'Performancë e Jashtëzakonshme Diellore<br />dhe Baterie',
-    feature2: 'Zgjidhje të Personalizuara<br />Pagese për Shtëpinë Tuaj',
-    feature3: 'ESK Solar<br />Mbështetje teknike 24/7 dhe garanci shumëvjeçare për pajisjet dhe performancën.'
+    headline: 'Zgjidhje Solare për Shtëpi, Biznese dhe Instalues',
+    subheadline: 'ESK Solar është distributor zyrtar i produkteve AZZURO në Kosovë dhe Ballkan, sisteme solare të provuara që sjellin kursime reale.',
+    buttonHome: 'Për Shtëpi',
+    buttonHomeSubtext: 'Ule faturën mujore të energjisë elektrike',
+    buttonBusiness: 'Për Biznese',
+    buttonBusinessSubtext: 'Zvogëlo shpenzimet operative',
+    buttonInstallers: 'Për Instalues',
+    buttonInstallersSubtext: 'Produkte AZUROS, stok & mbështetje',
+    trustSignal1: 'Stok lokal në Kosovë',
+    trustSignal2: 'Garanci afatgjate',
+    trustSignal3: 'Mbështetje teknike & pas-shitje',
+    trustSignal4: 'Aktiv në Kosovë & Ballkan'
+  },
+
+  // Section 2: Rising Energy Costs
+  energyCosts: {
+    title: 'Energjia elektrike po kushton gjithnjë e ma shumë. Pasiguria po rritet.',
+    copy: 'Çmimet e energjisë janë të paqëndrueshme.<br />Faturat mujore po rriten pa paralajmërim.<br />Bizneset po humbin marzhë, shtëpitë po humbin kontroll.<br /><br />Energjia solare nuk është luks.<br />Asht zgjidhje praktike për me pasë stabilitet dhe kursime afatgjata.'
+  },
+
+  // Section 3: Complete Solar Solutions
+  completeSolutions: {
+    title: 'Zgjidhje Solare të Ndërtume për Rezultate Reale',
+    copy: 'Ne nuk shesim thjesht panele.<br />Ne ofrojmë sisteme solare të plota, të projektume për kushte reale në Kosovë dhe Ballkan.<br /><br />Me teknologjinë AZZURO, çdo sistem është:',
+    feature1: 'i testuar',
+    feature2: 'i qëndrueshëm',
+    feature3: 'i zgjerueshëm',
+    feature4: 'i lehtë për mirëmbajtje'
+  },
+
+  // Section 4: Three Columns
+  solutionsColumns: {
+    home: {
+      title: 'Për shtëpi',
+      subtitle: 'Solar për Shtëpi Private',
+      feature1: 'Ule faturën mujore të energjisë elektrike',
+      feature2: 'Investim që kthehet vet',
+      feature3: 'Instalime të pastra dhe të sigurta',
+      feature4: 'Mundësi zgjerimi në të ardhmen',
+      button: 'Shiko Zgjidhjet për Shtëpi'
+    },
+    business: {
+      title: 'Për Biznese',
+      subtitle: 'Solar për Biznese & Industri',
+      feature1: 'Zvogëlo shpenzimet operative',
+      feature2: 'Stabilitet energjetik afatgjatë',
+      feature3: 'Payback i qartë dhe i matshëm',
+      feature4: 'Zgjidhje të shkallëzueshme',
+      button: 'Shiko Zgjidhjet për Biznese'
+    },
+    installers: {
+      title: 'Për Instalues',
+      subtitle: 'Partner për Instalues & EPC',
+      feature1: 'Produkte AZZURO në stok',
+      feature2: 'Mbështetje teknike lokale',
+      feature3: 'Dokumentacion & trajnim',
+      feature4: 'Partneritet afatgjatë',
+      button: 'Bëhu Partner'
+    }
+  },
+
+  // Section 5: Why Choose ESK Solar
+  whyChooseUs: {
+    title: 'Pse me zgjedhë ESK Solar?',
+    feature1: 'Distributor zyrtar I AZZURO per ballkan',
+    feature2: 'Stok lokal, pa pritje',
+    feature3: 'Mbështetje teknike para dhe pas shitjes',
+    feature4: 'Fokus në rezultate, jo premtime',
+    feature5: 'Përvojë në projekte rezidenciale & komerciale',
+    copy: 'Ne punojmë me klientë që duan zgjidhje serioze, jo eksperimente.'
+  },
+
+  // Section 6: How It Works
+  howItWorks: {
+    title: 'Si funksionon?',
+    subtitle: 'Thjesht.',
+    step1: {
+      title: 'Analizë fillestare',
+      description: 'Kuptojmë nevojën dhe konsumin'
+    },
+    step2: {
+      title: 'Propozim i qartë',
+      description: 'Sistem i përshtatun + ROI i llogaritun'
+    },
+    step3: {
+      title: 'Furnizim & instalim',
+      description: 'Produkte cilësore, proces i kontrolluem'
+    },
+    step4: {
+      title: 'Mbështetje afatgjatë',
+      description: 'Garanci dhe servis lokal'
+    }
+  },
+
+  // Section 7: Social Proof
+  socialProof: {
+    title: 'Zgjidhje që përdoren çdo ditë',
+    subtitle: 'Sistemet tona janë të instaluara në:',
+    item1: 'Shtëpi private',
+    item2: 'Biznese të vogla & të mesme',
+    item3: 'Projekte komerciale',
+    item4: 'Rrjete instaluesish në Kosovë & rajon'
+  },
+
+  // Section 8: Final CTA
+  finalCta: {
+    title: 'Gati me kalu në energji solare?',
+    subtitle: 'Zgjedh çka t\'përshtatet:',
+    buttonHome: 'Për Shtëpi',
+    buttonBusiness: 'Për Biznese',
+    buttonInstallers: 'Për Instalues',
+    orText: 'Ose',
+    contactText: 'Kontakto ekipin tonë për këshillim profesional',
+    footerText: 'ESK Solar – Partner i besueshëm për zgjidhje solare në Kosovë dhe Ballkan.'
   },
 
   // Products

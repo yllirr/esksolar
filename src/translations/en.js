@@ -12,17 +12,120 @@ export const en = {
 
   // Hero Section
   hero: {
-    joined: 'JOINED',
-    title: 'Smart solutions for homes, businesses, or industries – designed for savings, independence, and a greener planet.',
-    brightFuture: 'BRIGHT FUTURE',
-    solarHome: 'Solar for Your Home',
-    solarBusiness: 'Solar for Your Business',
-    residence: 'Residence',
-    commercial: 'Commercial',
-    topPick: 'The No.1 Solution for Solar Energy and Home Energy Storage',
-    feature1: 'Exceptional Solar<br />and Battery<br />Performance',
-    feature2: 'Customized<br />Payment Solutions<br />for Your Home',
-    feature3: 'ESK Solar<br />24/7 technical support and multi-year warranty for equipment and performance.'
+    headline: 'Solar Solutions for Homes, Businesses, and Installers',
+    subheadline: 'ESK Solar is the official distributor of AZZURO products in Kosovo and the Balkans, proven solar systems that deliver real savings.',
+    buttonHome: 'For Home',
+    buttonHomeSubtext: 'Lower your monthly electricity bill',
+    buttonBusiness: 'For Business',
+    buttonBusinessSubtext: 'Reduce operational costs',
+    buttonInstallers: 'For Installers',
+    buttonInstallersSubtext: 'AZZURO products, stock & support',
+    trustSignal1: 'Local stock in Kosovo',
+    trustSignal2: 'Long-term warranty',
+    trustSignal3: 'Technical support & after-sales',
+    trustSignal4: 'Active in Kosovo & Balkans'
+  },
+
+  // Section 2: Rising Energy Costs
+  energyCosts: {
+    title: 'Electricity costs are rising. Uncertainty is growing.',
+    copy: 'Energy prices are unstable.<br />Monthly bills are rising without warning.<br />Businesses are losing margins, homes are losing control.<br /><br />Solar energy is not a luxury.<br />It\'s a practical solution for stability and long-term savings.'
+  },
+
+  // Section 3: Complete Solar Solutions
+  completeSolutions: {
+    title: 'Complete Solar Solutions Built for Real Results',
+    copy: 'We don\'t just sell panels.<br />We offer complete solar systems, designed for real conditions in Kosovo and the Balkans.<br /><br />With AZZURO technology, every system is:',
+    feature1: 'tested',
+    feature2: 'durable',
+    feature3: 'expandable',
+    feature4: 'easy to maintain'
+  },
+
+  // Section 4: Three Columns
+  solutionsColumns: {
+    home: {
+      title: 'For Home',
+      subtitle: 'Solar for Private Homes',
+      feature1: 'Lower your monthly electricity bill',
+      feature2: 'Investment that pays for itself',
+      feature3: 'Clean and safe installations',
+      feature4: 'Expansion possibilities in the future',
+      button: 'View Home Solutions'
+    },
+    business: {
+      title: 'For Business',
+      subtitle: 'Solar for Business & Industry',
+      feature1: 'Reduce operational costs',
+      feature2: 'Long-term energy stability',
+      feature3: 'Clear and measurable payback',
+      feature4: 'Scalable solutions',
+      button: 'View Business Solutions'
+    },
+    installers: {
+      title: 'For Installers',
+      subtitle: 'Partner for Installers & EPC',
+      feature1: 'AZZURO products in stock',
+      feature2: 'Local technical support',
+      feature3: 'Documentation & training',
+      feature4: 'Long-term partnership',
+      button: 'Become a Partner'
+    }
+  },
+
+  // Section 5: Why Choose ESK Solar
+  whyChooseUs: {
+    title: 'Why Choose ESK Solar?',
+    feature1: 'Official AZZURO distributor for the Balkans',
+    feature2: 'Local stock, no waiting',
+    feature3: 'Technical support before and after sales',
+    feature4: 'Focus on results, not promises',
+    feature5: 'Experience in residential & commercial projects',
+    copy: 'We work with clients who want serious solutions, not experiments.'
+  },
+
+  // Section 6: How It Works
+  howItWorks: {
+    title: 'How does it work?',
+    subtitle: 'Simple.',
+    step1: {
+      title: 'Initial analysis',
+      description: 'We understand your needs and consumption'
+    },
+    step2: {
+      title: 'Clear proposal',
+      description: 'Customized system + calculated ROI'
+    },
+    step3: {
+      title: 'Supply & installation',
+      description: 'Quality products, controlled process'
+    },
+    step4: {
+      title: 'Long-term support',
+      description: 'Warranty and local service'
+    }
+  },
+
+  // Section 7: Social Proof
+  socialProof: {
+    title: 'Solutions used every day',
+    subtitle: 'Our systems are installed in:',
+    item1: 'Private homes',
+    item2: 'Small & medium businesses',
+    item3: 'Commercial projects',
+    item4: 'Installer networks in Kosovo & region'
+  },
+
+  // Section 8: Final CTA
+  finalCta: {
+    title: 'Ready to switch to solar energy?',
+    subtitle: 'Choose what fits:',
+    buttonHome: 'For Home',
+    buttonBusiness: 'For Business',
+    buttonInstallers: 'For Installers',
+    orText: 'Or',
+    contactText: 'Contact our team for professional advice',
+    footerText: 'ESK Solar – Trusted partner for solar solutions in Kosovo and the Balkans.'
   },
 
   // Products

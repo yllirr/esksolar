@@ -1,0 +1,106 @@
+.energy-costs-section {
+  background: #ffffff;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-costs-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  position: relative;
+}
+
+.energy-costs-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.energy-costs-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.energy-costs-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(10, 14, 39, 0.5) 0%, rgba(10, 14, 39, 0.3) 100%);
+  z-index: 1;
+}
+
+.energy-costs-content {
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.energy-costs-content .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 4rem;
+}
+
+.energy-costs-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0a0e27;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.energy-costs-copy {
+  font-size: 1.15rem;
+  color: #333;
+  line-height: 1.9;
+  font-weight: 400;
+}
+
+.energy-costs-copy br {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 968px) {
+  .energy-costs-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .energy-costs-image-container {
+    min-height: 400px;
+  }
+
+  .energy-costs-content {
+    padding: 3rem 0;
+  }
+
+  .energy-costs-content .container {
+    padding: 0 2rem;
+  }
+
+  .energy-costs-title {
+    font-size: 2rem;
+  }
+
+  .energy-costs-copy {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .energy-costs-title {
+    font-size: 1.75rem;
+  }
+
+  .energy-costs-content .container {
+    padding: 0 1.5rem;
+  }
+}

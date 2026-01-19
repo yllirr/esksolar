@@ -2,11 +2,13 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { LanguageProvider } from './LanguageContext';
 import HeroSection from './HeroSection';
-import SolarOptions from './SolarOptions';
+import EnergyCosts from './EnergyCosts';
+import CompleteSolutions from './CompleteSolutions';
+import SolutionsColumns from './SolutionsColumns';
 import WhyChooseUs from './WhyChooseUs';
-import PlanPricing from './PlanPricing';
-import Testimonials from './Testimonials';
-import FAQQuote from './FAQQuote';
+import HowItWorks from './HowItWorks';
+import SocialProof from './SocialProof';
+import FinalCta from './FinalCta';
 import Footer from './Footer';
 import Products from './Products';
 import AboutUs from './AboutUs';
@@ -24,6 +26,7 @@ import Contact from './Contact';
 import HomeProducts from './HomeProducts';
 import BusinessProducts from './BusinessProducts';
 import './App.css';
+import './Header.css'; // Import Header.css last to override other CSS files
 
 // Scroll to top component
 function ScrollToTop() {
@@ -46,11 +49,13 @@ function App() {
           <Route path="/" element={
             <>
               <HeroSection />
-              <SolarOptions />
+              <EnergyCosts />
+              <CompleteSolutions />
+              <SolutionsColumns />
               <WhyChooseUs />
-              <PlanPricing />
-              <Testimonials />
-              <FAQQuote />
+              <HowItWorks />
+              <SocialProof />
+              <FinalCta />
               <Footer />
             </>
           } />
