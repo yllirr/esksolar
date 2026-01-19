@@ -234,6 +234,29 @@ export const en = {
     description: 'Our company provides advanced solutions for solar energy and energy storage.'
   },
 
+  // Rreth Nesh
+  rrethNesh: {
+    title: 'About Us',
+    subtitle: 'ESK Solar is a leading company in the field of renewable energy. Founded in 2012, our company has always strived to provide professionalism and the highest quality products.',
+    historia: 'Our History',
+    historiaText1: 'ESK Solar was founded in 2012 with a vision to bring clean and sustainable energy to Kosovo and the wider Balkan region. From our early days, we have been committed to providing solar solutions that help our customers save money, reduce dependence on traditional energy sources, and contribute to environmental protection.',
+    historiaText2: 'Over the years, we have grown our company from a small team into a large organization with experts specialized in the installation, maintenance, and consultation of solar energy systems. We have completed over 5,000 installations in Kosovo and the region, becoming one of the most trusted companies in the renewable energy field.',
+    historiaText3: 'Today, ESK Solar is the official distributor of AZZURO products in Kosovo and the Balkans, offering advanced technology and proven solutions that deliver real savings and high performance. Our technical expertise and commitment to quality have made us the partner of choice for thousands of families and businesses.',
+    misioni: 'Our Mission',
+    misioniText: 'Our mission is to become the leading partner for renewable energy solutions in Kosovo and the region. We want to help families and businesses transition to clean energy, reduce dependence on traditional energy sources, and contribute to creating a cleaner and more sustainable future for future generations. We believe that solar energy is not a luxury, but a practical solution for stability and long-term savings.',
+    vlerat: 'Our Values',
+    vlera1Title: 'Sustainability',
+    vlera1Text: 'Every decision we make is guided by our commitment to environmental responsibility. We believe in the importance of protecting the planet for future generations.',
+    vlera2Title: 'Innovation',
+    vlera2Text: 'We continuously push the boundaries of solar technology to deliver cutting-edge solutions and latest technology that maximize efficiency and performance.',
+    vlera3Title: 'Integrity',
+    vlera3Text: 'We build lasting relationships through transparency, honesty, and exceptional service. Our customers\' trust is most important to us.',
+    vlera4Title: 'Excellence',
+    vlera4Text: 'We strive for the highest standards in everything we do, from installation to ongoing support. Quality and professionalism are at the heart of every project.',
+    projektetTona: 'Our Projects',
+    projektetTonaDescription: 'View some of our most successful projects that we have completed in Kosovo and the region. Each project is a testament to our expertise and commitment to quality.'
+  },
+
   // Blog
   blog: {
     title: 'Blog',

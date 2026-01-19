@@ -12,6 +12,7 @@ import FinalCta from './FinalCta';
 import Footer from './Footer';
 import Products from './Products';
 import AboutUs from './AboutUs';
+import RrethNesh from './RrethNesh';
 import BlogPage from './BlogPage';
 import SinglePhaseInverters from './SinglePhaseInverters';
 import ThreePhaseInverters from './ThreePhaseInverters';
@@ -80,6 +81,12 @@ function App() {
           <Route path="/about" element={
             <>
               <AboutUs />
+              <Footer />
+            </>
+          } />
+          <Route path="/rreth-nesh" element={
+            <>
+              <RrethNesh />
               <Footer />
             </>
           } />

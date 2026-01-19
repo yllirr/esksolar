@@ -234,6 +234,29 @@ export const sq = {
     description: 'Kompania jonë ofron zgjidhje të avancuara për energjinë diellore dhe ruajtjen e energjisë.'
   },
 
+  // Rreth Nesh
+  rrethNesh: {
+    title: 'Rreth Nesh',
+    subtitle: 'ESK Solar është kompani lidere në fushën e energjisë së ripërtrishme. E themeluar që nga viti 2012, ku gjatë kësaj periudhe kompania jonë ka qenë gjithmonë në përpjekje për të ofruar profesionalizëm dhe produktet më cilësore.',
+    historia: 'Historia Jonë',
+    historiaText1: 'ESK Solar u themelua në vitin 2012 me vizion për të sjellë energjinë e pastër dhe të qëndrueshme në Kosovë dhe rajonin më të gjerë të Ballkanit. Që nga ditët tona të para, kemi qenë të përkushtuar për të ofruar zgjidhje solare që ndihmojnë klientët tanë të kursjnë para, të reduktojnë varësinë nga burimet tradicionale të energjisë dhe të kontribuojnë në mbrojtjen e mjedisit.',
+    historiaText2: 'Gjatë viteve, kemi rritur kompaninë tonë nga një ekip i vogël në një organizatë të madhe me ekspertë të specializuar në instalimin, mirëmbajtjen dhe këshillimin për sistemet e energjisë diellore. Kemi realizuar mbi 5,000 instalime në Kosovë dhe rajon, duke u bërë një nga kompanitë më të besueshme në fushën e energjisë së ripërtrishme.',
+    historiaText3: 'Sot, ESK Solar është distributor zyrtar i produkteve AZZURO në Kosovë dhe Ballkan, duke ofruar teknologji të avancuar dhe zgjidhje të provuara që sjellin kursime reale dhe performancë të lartë. Kompetenca jonë teknike dhe angazhimi për cilësi na kanë bërë partnerin e zgjedhur për mijëra familje dhe biznese.',
+    misioni: 'Misioni Ynë',
+    misioniText: 'Misioni ynë është të bëhemi partneri kryesor për zgjidhjet e energjisë së ripërtrishme në Kosovë dhe rajonin. Ne duam të ndihmojmë familjet dhe bizneset të kalojnë në energji të pastër, të reduktojnë varësinë nga burimet e energjisë tradicionale dhe të kontribuojnë në krijimin e një të ardhmeje më të pastër dhe më të qëndrueshme për gjeneratat e ardhshme. Ne besojmë që energjia solare nuk është luks, por zgjidhje praktike për stabilitet dhe kursime afatgjata.',
+    vlerat: 'Vlerat Tona',
+    vlera1Title: 'Qëndrueshmëri',
+    vlera1Text: 'Çdo vendim që marrim është i udhëhequr nga angazhimi ynë për përgjegjësi mjedisore. Ne besojmë në rëndësinë e mbrojtjes së planetit për gjeneratat e ardhshme.',
+    vlera2Title: 'Inovacion',
+    vlera2Text: 'Ne vazhdimisht shtyjmë kufijtë e teknologjisë solare për të ofruar zgjidhje të avancuara dhe teknologji të fundit që maksimizojnë efikasitetin dhe performancën.',
+    vlera3Title: 'Integritet',
+    vlera3Text: 'Ne ndërtojmë marrëdhënie të qëndrueshme përmes transparencës, ndershmërisë dhe shërbimit të jashtëzakonshëm. Besimi i klientëve tanë është më i rëndësishmi për ne.',
+    vlera4Title: 'Ekselencë',
+    vlera4Text: 'Ne përpiqemi për standardet më të larta në çdo gjë që bëjmë, nga instalimi deri te mbështetja e vazhdueshme. Cilësia dhe profesionalizmi janë në qendër të çdo projekti.',
+    projektetTona: 'Projektet Tona',
+    projektetTonaDescription: 'Shikoni disa nga projektet tona më të suksesshme që kemi realizuar në Kosovë dhe rajon. Çdo projekt është një testament i ekspertizës sonë dhe angazhimit për cilësi.'
+  },
+
   // Blog
   blog: {
     title: 'Blogu',

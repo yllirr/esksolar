@@ -36,6 +36,7 @@ const Header = () => {
           <nav className="nav-menu desktop-nav">
             <Link to="/">{getTranslation(language, 'nav.home')}</Link>
             <Link to="/products">{getTranslation(language, 'nav.products')}</Link>
+            <Link to="/rreth-nesh">{getTranslation(language, 'nav.aboutUs')}</Link>
             <Link to="/blog">{getTranslation(language, 'nav.blog')}</Link>
             <Link to="/contact">{getTranslation(language, 'nav.contact')}</Link>
           </nav>
@@ -70,6 +71,7 @@ const Header = () => {
         <nav className={`mobile-nav ${isMobileMenuOpen ? 'open' : ''}`}>
           <Link to="/" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.home')}</Link>
           <Link to="/products" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.products')}</Link>
+          <Link to="/rreth-nesh" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.aboutUs')}</Link>
           <Link to="/blog" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.blog')}</Link>
           <Link to="/contact" onClick={() => setIsMobileMenuOpen(false)}>{getTranslation(language, 'nav.contact')}</Link>
           
